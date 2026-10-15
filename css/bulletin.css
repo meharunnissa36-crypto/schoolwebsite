@@ -1,0 +1,358 @@
+/* ==========================================================================
+   OLD BOYS' BULLETIN STYLESHEET
+   Replicating media_1792044901375.png for Basharat Higher Secondary School
+   ========================================================================== */
+
+.bulletin-page .subpage-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--color-navy-dark, #040D1D);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bulletin-page .subpage-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.bulletin-page .subpage-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 13, 29, 0.4) 0%,
+    rgba(8, 27, 58, 0.3) 40%,
+    rgba(4, 13, 29, 0.88) 100%
+  );
+}
+
+.bulletin-page .subpage-hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.bulletin-page .subpage-title {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 5.2vw, 3.8rem);
+  font-weight: 700;
+  color: transparent !important;
+  -webkit-text-stroke: 1.8px #EAA023;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+}
+
+.bulletin-page .breadcrumb-bar {
+  background: #EAA023;
+  padding: 8px 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1E293B;
+}
+
+.bulletin-page .breadcrumb-bar a {
+  color: #1E293B;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bulletin-page .breadcrumb-bar a:hover {
+  text-decoration: underline;
+}
+
+.bulletin-page .breadcrumb-separator {
+  margin: 0 6px;
+  color: #334155;
+}
+
+/* Bulletin Main Layout Section */
+.bulletin-section {
+  padding: 50px 0 80px;
+  background-color: #F8FAFC;
+}
+
+.bulletin-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .bulletin-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Bulletin Grid - 2 columns */
+.bulletin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  row-gap: 44px;
+}
+
+@media (max-width: 640px) {
+  .bulletin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Bulletin Card Item */
+.bulletin-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.25s ease;
+}
+
+.bulletin-item:hover {
+  transform: translateY(-4px);
+}
+
+.bulletin-item:hover .bulletin-cover-wrap {
+  box-shadow: 0 16px 32px rgba(8, 27, 58, 0.22);
+}
+
+.bulletin-item:hover .bulletin-month-title {
+  color: #EAA023;
+}
+
+/* Bulletin Cover Wrap & Magazine Style */
+.bulletin-cover-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1.35;
+  background: #FFFFFF;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(8, 27, 58, 0.12);
+  transition: box-shadow 0.25s ease;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bulletin-cover-header {
+  background: #081B3A;
+  color: #FFFFFF;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bulletin-cover-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  color: #EAA023;
+}
+
+.bulletin-cover-vol {
+  font-size: 0.65rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+}
+
+.bulletin-cover-body {
+  flex: 1;
+  background: #F1F5F9;
+  position: relative;
+  overflow: hidden;
+}
+
+.bulletin-cover-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.bulletin-item:hover .bulletin-cover-body img {
+  transform: scale(1.04);
+}
+
+.bulletin-cover-ribbon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 27, 58, 0.85) 70%, #081B3A 100%);
+  padding: 16px 12px 10px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.bulletin-cover-kicker {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #EAA023;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.bulletin-cover-headline {
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #FFFFFF;
+}
+
+/* Bulletin Labels below cover */
+.bulletin-meta {
+  margin-top: 14px;
+}
+
+.bulletin-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #94A3B8;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.bulletin-month-title {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #081B3A;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+/* Interactive Bulletin Reader Modal */
+.bulletin-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.bulletin-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bulletin-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 13, 29, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+.bulletin-modal-container {
+  position: relative;
+  z-index: 10;
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.bulletin-modal-header {
+  padding: 20px 24px;
+  background: #081B3A;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #EAA023;
+}
+
+.bulletin-modal-header h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.bulletin-modal-close {
+  background: transparent;
+  border: none;
+  color: #EAA023;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s ease;
+}
+
+.bulletin-modal-close:hover {
+  transform: rotate(90deg);
+  color: #FFFFFF;
+}
+
+.bulletin-modal-body {
+  padding: 28px 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.bulletin-modal-body h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  color: #081B3A;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.bulletin-modal-actions {
+  padding: 16px 24px;
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-bulletin-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #081B3A;
+  color: #EAA023;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-bulletin-download:hover {
+  background: #0F52BA;
+  color: #FFFFFF;
+}

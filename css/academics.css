@@ -1,0 +1,122 @@
+/* ==========================================================================
+   ACADEMICS SECTION & SUBPAGES STYLESHEET
+   Matches exact layout of Aitchison College Academics Route
+   ========================================================================== */
+
+/* 8-Photo Science Laboratory Grid (Screenshot 3) */
+.science-labs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+  margin-bottom: 40px;
+}
+
+.lab-photo-item {
+  position: relative;
+  height: 220px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #F1F5F9;
+}
+
+.lab-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.lab-photo-item:hover img {
+  transform: scale(1.06);
+}
+
+/* 4-Photo 2x2 Innovation Centre Gallery (Screenshot 2) */
+.innovation-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.innovation-photo-item {
+  position: relative;
+  height: 240px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #081B3A;
+}
+
+.innovation-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.innovation-photo-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Read More Button (Screenshot 3) */
+.btn-readmore-academic {
+  display: inline-block;
+  padding: 8px 22px;
+  border: 1px solid #CBD5E1;
+  color: #1E3A8A;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 2px;
+  margin: 16px 0 28px 0;
+  transition: all var(--transition-fast);
+  background: #FFFFFF;
+}
+
+.btn-readmore-academic:hover {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+}
+
+/* Sidebar Specific Styling for Academics (Exact Match to Screenshot) */
+.academic-sidebar-list .sidebar-nav-item.active .sidebar-nav-link,
+.academic-sidebar-list .sidebar-nav-item.active {
+  background-color: #081B3A !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+
+.academic-sidebar-list .sidebar-nav-item.active .sidebar-nav-link {
+  border-left: none !important;
+  padding-left: 20px !important;
+}
+
+.academic-sidebar-list .sidebar-nav-link {
+  padding: 13px 20px;
+  font-size: 0.88rem;
+  color: #334155;
+  border-bottom: 1px solid #E2E8F0;
+  display: block;
+}
+
+.academic-sidebar-list .sidebar-nav-link:hover {
+  background-color: #F8FAFC;
+  color: #081B3A;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .science-labs-grid,
+  .innovation-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lab-photo-item,
+  .innovation-photo-item {
+    height: 200px;
+  }
+}

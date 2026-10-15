@@ -1,0 +1,16 @@
+{
+  "name": "basharat-higher-secondary-school",
+  "version": "1.0.0",
+  "description": "Official Website of Basharat Higher Secondary School (BHSS)",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "keywords": [
+    "school",
+    "education",
+    "bhss",
+    "portal"
+  ],
+  "author": "Basharat Higher Secondary School",
+  "license": "ISC"
+}

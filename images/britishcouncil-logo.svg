@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%">
+  <!-- British Council Partner Schools Logo -->
+  <g fill="#2D3748">
+    <!-- British Council Dots -->
+    <circle cx="16" cy="22" r="4.5" fill="#002B49" />
+    <circle cx="28" cy="22" r="4.5" fill="#002B49" />
+    <circle cx="16" cy="34" r="4.5" fill="#002B49" />
+    <circle cx="28" cy="34" r="4.5" fill="#002B49" />
+    <text x="46" y="26" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="14.5" fill="#002B49" letter-spacing="0.5">
+      BRITISH COUNCIL
+    </text>
+    <text x="46" y="39" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="600" font-size="9.5" fill="#4A5568" letter-spacing="1">
+      Partner Schools Global Network
+    </text>
+    <text x="46" y="49" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="8.5" fill="#D69E2E">
+      OFFICIAL ATTACHED CENTRE
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,340 @@
+/* ==========================================================================
+   CONTACT DETAILS PAGE STYLESHEET
+   Replicating media_1792044899983.png for Basharat Higher Secondary School
+   ========================================================================== */
+
+.contact-page .subpage-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--color-navy-dark, #040D1D);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.contact-page .subpage-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.contact-page .subpage-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 13, 29, 0.4) 0%,
+    rgba(8, 27, 58, 0.3) 40%,
+    rgba(4, 13, 29, 0.88) 100%
+  );
+}
+
+.contact-page .subpage-hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.contact-page .subpage-title {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 5.2vw, 3.8rem);
+  font-weight: 700;
+  color: transparent !important;
+  -webkit-text-stroke: 1.8px #EAA023;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+}
+
+.contact-page .breadcrumb-bar {
+  background: #EAA023;
+  padding: 8px 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1E293B;
+}
+
+.contact-page .breadcrumb-bar a {
+  color: #1E293B;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-page .breadcrumb-bar a:hover {
+  text-decoration: underline;
+}
+
+.contact-page .breadcrumb-separator {
+  margin: 0 6px;
+  color: #334155;
+}
+
+/* Contact Main Section */
+.contact-section {
+  padding: 50px 0 80px;
+  background-color: #FFFFFF;
+}
+
+.contact-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Notices */
+.contact-notices {
+  margin-bottom: 40px;
+}
+
+.contact-notice-p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+/* Section Headings */
+.contact-heading {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #081B3A;
+  margin-top: 36px;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* Email Table Grid */
+.email-directory-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+  background: #FFFFFF;
+}
+
+.email-directory-table tr {
+  border-bottom: 1px solid #E2E8F0;
+  transition: background-color 0.2s ease;
+}
+
+.email-directory-table tr:hover {
+  background-color: #F8FAFC;
+}
+
+.email-role-cell {
+  padding: 14px 16px;
+  width: 38%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #081B3A;
+  vertical-align: top;
+}
+
+.email-address-cell {
+  padding: 14px 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #334155;
+  vertical-align: top;
+}
+
+.email-address-cell a {
+  color: #0F52BA;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.email-address-cell a:hover {
+  color: #EAA023;
+  text-decoration: underline;
+}
+
+.email-address-note {
+  color: #64748B;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+/* Postal Address & Telephone Block */
+.postal-address-block {
+  margin-bottom: 50px;
+}
+
+.postal-org-name {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #081B3A;
+  margin-bottom: 4px;
+}
+
+.postal-line {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.uan-highlight {
+  margin-top: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #081B3A;
+}
+
+.uan-highlight a {
+  color: #081B3A;
+  text-decoration: none;
+}
+
+.uan-highlight a:hover {
+  color: #EAA023;
+}
+
+.fax-line {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #64748B;
+  margin-top: 4px;
+}
+
+.additional-numbers-title {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F52BA;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.additional-number-row {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.additional-number-row a {
+  color: #475569;
+  text-decoration: none;
+}
+
+.additional-number-row a:hover {
+  color: #081B3A;
+  font-weight: 600;
+}
+
+/* Direct Inquiry Box */
+.inquiry-card-wrap {
+  margin-top: 50px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.inquiry-card-left h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  color: #081B3A;
+  margin-bottom: 12px;
+}
+
+.inquiry-card-left p {
+  color: #64748B;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.inquiry-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.inquiry-whatsapp-btn:hover {
+  background: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
+.inquiry-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inquiry-form-input,
+.inquiry-form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.inquiry-form-input:focus,
+.inquiry-form-textarea:focus {
+  border-color: #081B3A;
+  box-shadow: 0 0 0 3px rgba(8, 27, 58, 0.1);
+}
+
+.inquiry-form-submit {
+  background: #081B3A;
+  color: #EAA023;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.inquiry-form-submit:hover {
+  background: #0D2650;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .email-role-cell {
+    width: 45%;
+    font-size: 0.88rem;
+    padding: 10px 8px;
+  }
+  .email-address-cell {
+    font-size: 0.88rem;
+    padding: 10px 8px;
+  }
+  .inquiry-card-wrap {
+    grid-template-columns: 1fr;
+    padding: 24px 18px;
+  }
+}

@@ -1,0 +1,449 @@
+/* ==========================================================================
+   CLUBS & SOCIETIES PAGE STYLESHEET
+   Replicating exact layout and 3D Coverflow Carousel of Aitchison College
+   Matches Screenshot media_1792037739863.jpg for Basharat H.S.S
+   ========================================================================== */
+
+/* Outlined Gold Title Matching Screenshot media_1792037739863.jpg */
+.clubs-page .subpage-title,
+.subpage-title.clubs-active-title {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: 700;
+  color: transparent !important;
+  -webkit-text-stroke: 1.8px #EAB308;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+}
+
+/* Breadcrumb Bar (Golden Mustard Accent) */
+.clubs-page .breadcrumb-bar {
+  background: #EAA023;
+  padding: 8px 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1E293B;
+}
+
+.clubs-page .breadcrumb-bar a {
+  color: #1E293B;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.clubs-page .breadcrumb-bar a:hover {
+  text-decoration: underline;
+}
+
+.clubs-page .breadcrumb-separator {
+  margin: 0 6px;
+  color: #334155;
+}
+
+/* Stat Bar (Junior 27 | Prep 13 | Senior 22 Total 62) */
+.clubs-stat-bar {
+  font-family: var(--font-heading, "Montserrat", sans-serif);
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 18px 0 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  line-height: 1.4;
+}
+
+.clubs-stat-bar span.wing-stat {
+  color: #081B3A;
+  letter-spacing: 0.2px;
+}
+
+.clubs-stat-bar .stat-divider {
+  color: #64748B;
+  font-weight: 500;
+  margin: 0 4px;
+}
+
+.clubs-stat-bar .stat-total-badge {
+  color: #991B1B; /* Rich crimson/red match */
+  font-weight: 800;
+  margin-left: 4px;
+}
+
+/* 3D Perspective Coverflow Carousel (Screenshot Match) */
+.coverflow-container {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  margin: 20px auto 32px auto;
+  perspective: 1200px;
+  user-select: none;
+}
+
+.coverflow-stage {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.coverflow-slide {
+  position: absolute;
+  width: 380px;
+  max-width: 64%;
+  height: 400px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.55s ease, 
+              filter 0.55s ease;
+  cursor: pointer;
+  background: #081B3A;
+}
+
+.coverflow-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coverflow-slide .slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 34px 16px 16px 16px;
+  background: linear-gradient(180deg, transparent 0%, rgba(4, 13, 29, 0.4) 30%, rgba(4, 13, 29, 0.92) 100%);
+  color: #FFFFFF;
+  text-align: center;
+  pointer-events: none;
+}
+
+.coverflow-slide .society-name {
+  font-family: var(--font-heading, "Montserrat", sans-serif);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+  margin: 0;
+}
+
+/* Active center slide */
+.coverflow-slide.active {
+  transform: translateX(0) scale(1) translateZ(0);
+  z-index: 10;
+  opacity: 1;
+  filter: none;
+}
+
+/* Previous left slide angled with 3D perspective */
+.coverflow-slide.prev {
+  transform: translateX(-58%) scale(0.85) rotateY(28deg);
+  transform-origin: center right;
+  z-index: 6;
+  opacity: 0.88;
+  filter: brightness(0.88);
+}
+
+/* Next right slide angled with 3D perspective */
+.coverflow-slide.next {
+  transform: translateX(58%) scale(0.85) rotateY(-28deg);
+  transform-origin: center left;
+  z-index: 6;
+  opacity: 0.88;
+  filter: brightness(0.88);
+}
+
+/* Hidden slides */
+.coverflow-slide.hidden-left {
+  transform: translateX(-95%) scale(0.65) rotateY(42deg);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.coverflow-slide.hidden-right {
+  transform: translateX(95%) scale(0.65) rotateY(-42deg);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Carousel Navigation Arrows */
+.coverflow-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(8, 27, 58, 0.75);
+  color: #FFFFFF;
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  z-index: 15;
+  transition: all 0.25s ease;
+  opacity: 0.7;
+}
+
+.coverflow-container:hover .coverflow-nav-arrow {
+  opacity: 1;
+}
+
+.coverflow-nav-arrow:hover {
+  background: #EAB308;
+  color: #081B3A;
+  border-color: #EAB308;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.coverflow-nav-arrow.prev-btn {
+  left: -12px;
+}
+
+.coverflow-nav-arrow.next-btn {
+  right: -12px;
+}
+
+/* Coverflow Pagination Dots (Screenshot Match) */
+.coverflow-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.coverflow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.coverflow-dot:hover {
+  background: #94A3B8;
+  transform: scale(1.3);
+}
+
+.coverflow-dot.active {
+  background: #0284C7;
+  transform: scale(1.35);
+  box-shadow: 0 0 6px rgba(2, 132, 199, 0.5);
+}
+
+/* Directory of 62 Clubs & Societies Tabs */
+.clubs-directory-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.clubs-wing-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.wing-tab-btn {
+  padding: 9px 20px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: 1px solid #CBD5E1;
+  background: #F8FAFC;
+  color: #334155;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.25s ease);
+}
+
+.wing-tab-btn:hover {
+  border-color: #081B3A;
+  color: #081B3A;
+}
+
+.wing-tab-btn.active {
+  background: #081B3A;
+  color: #FFFFFF;
+  border-color: #081B3A;
+  box-shadow: 0 4px 12px rgba(8, 27, 58, 0.2);
+}
+
+.wing-clubs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.club-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-left: 3px solid var(--color-gold, #D4AF37);
+  border-radius: 4px;
+  transition: transform var(--transition-fast, 0.25s ease), box-shadow var(--transition-fast, 0.25s ease);
+}
+
+.club-card-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.club-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: rgba(8, 27, 58, 0.08);
+  color: #081B3A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.club-info-box h5 {
+  font-family: var(--font-heading, "Montserrat", sans-serif);
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #081B3A;
+  margin: 0 0 4px 0;
+}
+
+.club-info-box p {
+  font-size: 0.82rem;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Sidebar Clean Match from Screenshot media_1792037739863.jpg */
+.clubs-page .schools-sidebar,
+.aitchison-sidebar-clean {
+  background: #F4F5F7;
+  border: 1px solid #E2E8F0;
+  border-radius: 2px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.clubs-page .schools-sidebar .sidebar-heading,
+.aitchison-sidebar-clean .sidebar-heading {
+  display: none !important;
+}
+
+.clubs-page .sidebar-nav-list,
+.aitchison-sidebar-clean .sidebar-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.clubs-page .sidebar-nav-item,
+.aitchison-sidebar-clean .sidebar-nav-item {
+  border-bottom: 1px solid #E2E8F0;
+  margin: 0;
+}
+
+.clubs-page .sidebar-nav-item:last-child,
+.aitchison-sidebar-clean .sidebar-nav-item:last-child {
+  border-bottom: none;
+}
+
+.clubs-page .sidebar-nav-link,
+.aitchison-sidebar-clean .sidebar-nav-link {
+  display: block;
+  padding: 11px 18px;
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+  border-left: none !important;
+}
+
+.clubs-page .sidebar-nav-link i,
+.aitchison-sidebar-clean .sidebar-nav-link i {
+  display: none !important;
+}
+
+.clubs-page .sidebar-nav-item:hover:not(.active) .sidebar-nav-link,
+.aitchison-sidebar-clean .sidebar-nav-item:hover:not(.active) .sidebar-nav-link {
+  background: #EAEFF6;
+  color: #081B3A;
+  padding-left: 20px;
+}
+
+.clubs-page .sidebar-nav-item.active .sidebar-nav-link,
+.aitchison-sidebar-clean .sidebar-nav-item.active .sidebar-nav-link {
+  background: #081B3A !important;
+  color: #FFFFFF !important;
+  font-weight: 600;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .coverflow-slide {
+    width: 340px;
+    max-width: 70%;
+    height: 360px;
+  }
+  .coverflow-stage {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverflow-stage {
+    height: 300px;
+  }
+  .coverflow-slide {
+    width: 280px;
+    max-width: 82%;
+    height: 290px;
+  }
+  .coverflow-slide.prev {
+    transform: translateX(-40%) scale(0.85);
+  }
+  .coverflow-slide.next {
+    transform: translateX(40%) scale(0.85);
+  }
+  .coverflow-slide .society-name {
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+  }
+  .coverflow-nav-arrow {
+    display: none;
+  }
+  .wing-clubs-list {
+    grid-template-columns: 1fr;
+  }
+  .clubs-stat-bar {
+    font-size: 0.92rem;
+  }
+}

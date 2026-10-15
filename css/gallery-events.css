@@ -1,0 +1,286 @@
+/* ==========================================================================
+   EVENTS & GALLERY STYLESHEET
+   Replicating media_1792044901409.jpg for Basharat Higher Secondary School
+   ========================================================================== */
+
+.gallery-page .subpage-hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background-color: var(--color-navy-dark, #040D1D);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.gallery-page .subpage-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.gallery-page .subpage-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 13, 29, 0.4) 0%,
+    rgba(8, 27, 58, 0.3) 40%,
+    rgba(4, 13, 29, 0.88) 100%
+  );
+}
+
+.gallery-page .subpage-hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.gallery-page .subpage-title {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 700;
+  color: transparent !important;
+  -webkit-text-stroke: 1.8px #EAA023;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+}
+
+.gallery-page .breadcrumb-bar {
+  background: #EAA023;
+  padding: 8px 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1E293B;
+}
+
+.gallery-page .breadcrumb-bar a {
+  color: #1E293B;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.gallery-page .breadcrumb-bar a:hover {
+  text-decoration: underline;
+}
+
+.gallery-page .breadcrumb-separator {
+  margin: 0 6px;
+  color: #334155;
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 40px 0 80px;
+  background-color: #FFFFFF;
+}
+
+/* Category Filter Tabs Bar (Exact replication) */
+.gallery-filter-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.gallery-filter-btn {
+  background: #FFFFFF;
+  color: #081B3A;
+  border: 1px solid #CBD5E1;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.gallery-filter-btn:hover {
+  border-color: #081B3A;
+  background: #F1F5F9;
+}
+
+.gallery-filter-btn.active {
+  background: #081B3A;
+  color: #FFFFFF;
+  border-color: #081B3A;
+  box-shadow: 0 4px 12px rgba(8, 27, 58, 0.2);
+}
+
+/* 4-Column Photo Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Photo Card */
+.gallery-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 16 / 11;
+  background: #E2E8F0;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(8, 27, 58, 0.18);
+}
+
+.gallery-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.gallery-card:hover .gallery-card-img {
+  transform: scale(1.06);
+}
+
+/* Featured Overlay (Like "SCHOOL SPORTS DAY 2026") */
+.gallery-featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 13, 29, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  z-index: 5;
+  transition: background 0.25s ease;
+}
+
+.gallery-card:hover .gallery-featured-overlay {
+  background: rgba(4, 13, 29, 0.4);
+}
+
+.gallery-featured-title {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  line-height: 1.25;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Hover Zoom Caption */
+.gallery-card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, transparent 0%, rgba(4, 13, 29, 0.85) 100%);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+  z-index: 4;
+}
+
+.gallery-card:hover .gallery-card-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lightbox Modal */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(4, 13, 29, 0.94);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.gallery-lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-lightbox-img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-lightbox-caption {
+  margin-top: 14px;
+  color: #FFFFFF;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #EAA023;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.gallery-lightbox-close:hover {
+  transform: rotate(90deg);
+  color: #FFFFFF;
+}
