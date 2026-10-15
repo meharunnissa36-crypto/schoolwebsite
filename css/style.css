@@ -1044,6 +1044,109 @@ ul, ol {
   letter-spacing: 0.5px;
 }
 
+/* Drawer Instant Search Filter */
+.drawer-search-wrap {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.drawer-search-input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-size: 0.84rem;
+  transition: all var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.drawer-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.drawer-search-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.3);
+  outline: none;
+}
+
+.drawer-search-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+/* Drawer Nested Sub-Pages System */
+.drawer-card-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.drawer-sublinks {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-left: 20px;
+  padding-left: 14px;
+  border-left: 1.5px solid rgba(212, 175, 55, 0.3);
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.drawer-sublink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 11px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.drawer-sublink:hover,
+.drawer-sublink:active {
+  background: rgba(212, 175, 55, 0.16);
+  color: var(--color-gold-light);
+  border-color: rgba(212, 175, 55, 0.45);
+  padding-left: 14px;
+}
+
+.drawer-sublink-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-sublink i {
+  font-size: 0.74rem;
+  color: var(--color-gold);
+  width: 14px;
+  text-align: center;
+}
+
+.drawer-sublink-badge {
+  font-size: 0.6rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--color-gold-light);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
 /* Drawer Pills */
 .drawer-links-pills {
   display: flex;

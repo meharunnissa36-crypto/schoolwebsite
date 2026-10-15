@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initModals();
   initMobileNav();
+  initDrawerSearch();
   initAnnouncementTicker();
 });
 
@@ -548,3 +549,46 @@ function initAnnouncementTicker() {
     });
   }
 }
+
+/* --------------------------------------------------------------------------
+   12. MOBILE DRAWER REAL-TIME SEARCH FILTER
+   -------------------------------------------------------------------------- */
+function initDrawerSearch() {
+  const searchInput = document.getElementById('drawerSearchInput');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    const groups = document.querySelectorAll('.site-drawer .drawer-card-group');
+    const cards = document.querySelectorAll('.site-drawer .drawer-links-grid > .drawer-link-card');
+    const sections = document.querySelectorAll('.site-drawer .drawer-section');
+
+    groups.forEach(group => {
+      const text = group.textContent.toLowerCase();
+      if (!query || text.includes(query)) {
+        group.style.display = '';
+      } else {
+        group.style.display = 'none';
+      }
+    });
+
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (!query || text.includes(query)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    sections.forEach(sec => {
+      const visible = sec.querySelectorAll('.drawer-card-group:not([style*="display: none"]), .drawer-links-grid > .drawer-link-card:not([style*="display: none"])');
+      if (query && visible.length === 0) {
+        sec.style.display = 'none';
+      } else {
+        sec.style.display = '';
+      }
+    });
+  });
+}
+
