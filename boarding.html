@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Core and Subpage Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=4.0">
+  <link rel="stylesheet" href="css/style.css?v=4.2">
   <link rel="stylesheet" href="css/our-schools.css">
   <link rel="stylesheet" href="css/boarding.css">
 </head>
@@ -159,7 +159,7 @@
         <img src="images/crest.svg" alt="Basharat Crest" class="drawer-crest">
         <div>
           <span class="drawer-title">BASHARAT H.S.S</span>
-          <span class="drawer-subtitle">Campus Portal &bull; All Pages Directory</span>
+          <span class="drawer-subtitle">Campus Navigation</span>
         </div>
       </div>
       <button class="drawer-close" id="drawerCloseBtn" aria-label="Close Navigation Menu">
@@ -167,331 +167,127 @@
       </button>
     </div>
 
+    <!-- 2. Clean Navigation List -->
     <div class="drawer-body">
-      <!-- 2. Fast Access Action Strip -->
-      <div class="drawer-quick-strip">
-        <a href="https://wa.me/923005552477?text=Hello%20Basharat%20School%20Admissions%20Desk%2C%20I%20would%20like%20to%20apply." target="_blank" class="strip-btn strip-apply">
-          <i class="fab fa-whatsapp"></i> Apply Now
+      <nav class="drawer-nav" aria-label="Mobile Navigation">
+
+        <!-- 1. HOME -->
+        <div class="drawer-nav-item">
+          <a href="index.html" class="drawer-nav-link">
+            <span class="nav-link-left"><i class="fas fa-home"></i> Home</span>
+          </a>
+        </div>
+
+        <!-- 2. ABOUT US (WITH SUB-PAGES ACCORDION) -->
+        <div class="drawer-nav-item has-submenu">
+          <button type="button" class="drawer-nav-toggle" aria-expanded="false">
+            <span class="nav-link-left"><i class="fas fa-landmark"></i> About Us</span>
+            <i class="fas fa-chevron-down nav-toggle-chevron"></i>
+          </button>
+          <div class="drawer-submenu">
+            <a href="index.html#welcome" class="drawer-sublink"><i class="fas fa-history"></i> Heritage &amp; School Vision</a>
+            <a href="index.html#governors" class="drawer-sublink"><i class="fas fa-user-shield"></i> Board of Governors</a>
+            <a href="principals-letters.html" class="drawer-sublink"><i class="fas fa-envelope-open-text"></i> Principal's Letters to Parents</a>
+            <a href="news-events.html" class="drawer-sublink"><i class="fas fa-newspaper"></i> News, Dispatches &amp; Events</a>
+            <a href="old-boys-bulletin.html" class="drawer-sublink"><i class="fas fa-book-open"></i> Old Boys' Bulletin (Alumni)</a>
+            <a href="careers.html" class="drawer-sublink"><i class="fas fa-briefcase"></i> Careers at BHSS</a>
+          </div>
+        </div>
+
+        <!-- 3. OUR SCHOOLS (WITH SUB-PAGES ACCORDION) -->
+        <div class="drawer-nav-item has-submenu">
+          <button type="button" class="drawer-nav-toggle" aria-expanded="false">
+            <span class="nav-link-left"><i class="fas fa-school"></i> Our Schools</span>
+            <i class="fas fa-chevron-down nav-toggle-chevron"></i>
+          </button>
+          <div class="drawer-submenu">
+            <a href="our-schools.html" class="drawer-sublink drawer-sublink-all"><i class="fas fa-th-large"></i> All Schools Overview</a>
+            <a href="our-schools.html#junior" class="drawer-sublink"><i class="fas fa-child"></i> Junior School (Playgroup – Grade 5)</a>
+            <a href="our-schools.html#prep" class="drawer-sublink"><i class="fas fa-book-reader"></i> Prep School (Grades 6 – 8)</a>
+            <a href="our-schools.html#senior" class="drawer-sublink"><i class="fas fa-user-graduate"></i> Senior School (Grades 9 – 12)</a>
+          </div>
+        </div>
+
+        <!-- 4. ACADEMICS (WITH SUB-PAGES ACCORDION) -->
+        <div class="drawer-nav-item has-submenu">
+          <button type="button" class="drawer-nav-toggle" aria-expanded="false">
+            <span class="nav-link-left"><i class="fas fa-graduation-cap"></i> Academics</span>
+            <i class="fas fa-chevron-down nav-toggle-chevron"></i>
+          </button>
+          <div class="drawer-submenu">
+            <a href="academics.html" class="drawer-sublink drawer-sublink-all"><i class="fas fa-th-large"></i> Academics Overview</a>
+            <a href="academics.html#senior" class="drawer-sublink"><i class="fas fa-award"></i> Cambridge O &amp; A Levels</a>
+            <a href="academics.html#senior" class="drawer-sublink"><i class="fas fa-certificate"></i> Matric &amp; FSc (Pre-Med/Eng/ICS)</a>
+            <a href="academics.html#curriculum" class="drawer-sublink"><i class="fas fa-route"></i> Dual Curriculum Pathways</a>
+            <a href="calendar.html" class="drawer-sublink"><i class="fas fa-calendar-alt"></i> Academic Term Calendar</a>
+            <a href="downloads.html" class="drawer-sublink"><i class="fas fa-download"></i> Syllabus Handbooks &amp; Downloads</a>
+          </div>
+        </div>
+
+        <!-- 5. BOARDING (WITH SUB-PAGES ACCORDION) -->
+        <div class="drawer-nav-item has-submenu">
+          <button type="button" class="drawer-nav-toggle" aria-expanded="false">
+            <span class="nav-link-left"><i class="fas fa-bed"></i> Boarding</span>
+            <i class="fas fa-chevron-down nav-toggle-chevron"></i>
+          </button>
+          <div class="drawer-submenu">
+            <a href="boarding.html" class="drawer-sublink drawer-sublink-all"><i class="fas fa-th-large"></i> Boarding Life Overview</a>
+            <a href="boarding.html#houses" class="drawer-sublink"><i class="fas fa-building"></i> 8 Residential Boarding Houses</a>
+            <a href="boarding.html#pastoral" class="drawer-sublink"><i class="fas fa-heartbeat"></i> Pastoral Care &amp; Health Centre</a>
+            <a href="boarding.html#routine" class="drawer-sublink"><i class="fas fa-utensils"></i> Dining Hall &amp; Daily Routine</a>
+            <a href="boarding.html#admissions" class="drawer-sublink"><i class="fas fa-clipboard-check"></i> Boarding Admissions Inquiry</a>
+          </div>
+        </div>
+
+        <!-- 6. ADMISSIONS & FEES (WITH SUB-PAGES ACCORDION) -->
+        <div class="drawer-nav-item has-submenu">
+          <button type="button" class="drawer-nav-toggle" aria-expanded="false">
+            <span class="nav-link-left"><i class="fas fa-door-open"></i> Admissions &amp; Fees</span>
+            <i class="fas fa-chevron-down nav-toggle-chevron"></i>
+          </button>
+          <div class="drawer-submenu">
+            <a href="index.html#admissions" class="drawer-sublink"><i class="fas fa-clipboard-list"></i> Admissions Policy &amp; Eligibility</a>
+            <a href="fee-structure.html" class="drawer-sublink"><i class="fas fa-receipt"></i> Official Fee Structure 2025–26</a>
+            <a href="downloads.html" class="drawer-sublink"><i class="fas fa-file-pdf"></i> Download Prospectus &amp; Forms</a>
+            <a href="https://wa.me/923005552477?text=Hello%20BHSS%20Admissions%20Desk" target="_blank" rel="noopener" class="drawer-sublink"><i class="fab fa-whatsapp"></i> Chat with Admissions Desk</a>
+          </div>
+        </div>
+
+        <!-- 7. CAMPUS LIFE (WITH SUB-PAGES ACCORDION) -->
+        <div class="drawer-nav-item has-submenu">
+          <button type="button" class="drawer-nav-toggle" aria-expanded="false">
+            <span class="nav-link-left"><i class="fas fa-trophy"></i> Campus Life</span>
+            <i class="fas fa-chevron-down nav-toggle-chevron"></i>
+          </button>
+          <div class="drawer-submenu">
+            <a href="sports.html" class="drawer-sublink"><i class="fas fa-running"></i> Sports &amp; Athletics Complex</a>
+            <a href="sports.html#facilities" class="drawer-sublink"><i class="fas fa-horse"></i> Equestrian Riding Club</a>
+            <a href="sports.html#facilities" class="drawer-sublink"><i class="fas fa-swimming-pool"></i> Olympic Swimming Pool</a>
+            <a href="clubs-societies.html" class="drawer-sublink"><i class="fas fa-users-cog"></i> 62 Clubs &amp; Societies</a>
+            <a href="gallery.html" class="drawer-sublink"><i class="fas fa-camera-retro"></i> Campus Photo Gallery</a>
+          </div>
+        </div>
+
+        <!-- 8. CONTACT US -->
+        <div class="drawer-nav-item">
+          <a href="contact.html" class="drawer-nav-link">
+            <span class="nav-link-left"><i class="fas fa-phone-alt"></i> Contact Us</span>
+          </a>
+        </div>
+
+      </nav>
+
+      <!-- 3. Drawer Clean Footer Actions -->
+      <div class="drawer-actions-footer">
+        <a href="https://wa.me/923005552477?text=Hello%20Basharat%20School%20Admissions%20Desk%2C%20I%20would%20like%20to%20apply." target="_blank" rel="noopener" class="btn-drawer-action btn-drawer-whatsapp">
+          <i class="fab fa-whatsapp"></i> Apply via WhatsApp
         </a>
-        <a href="index.html#portal" class="strip-btn strip-portal">
+        <a href="index.html#portal" class="btn-drawer-action btn-drawer-portal">
           <i class="fas fa-user-lock"></i> Student Portal
         </a>
-        <a href="tel:+9242111363063" class="strip-btn strip-uan">
-          <i class="fas fa-phone-alt"></i> UAN Helpline
-        </a>
-      </div>
-
-      <!-- 3. Real-Time Instant Search Filter -->
-      <div class="drawer-search-wrap">
-        <i class="fas fa-search drawer-search-icon"></i>
-        <input type="text" id="drawerSearchInput" class="drawer-search-input" placeholder="Search pages, wings, fee, hostel, sports..." aria-label="Search pages">
-      </div>
-
-      <!-- ==============================================
-           CORE PILLARS (HOME, ABOUT, SCHOOLS, ACADEMICS,
-           BOARDING, ADMISSIONS, CONTACT)
-           ============================================== -->
-      <div class="drawer-section">
-        <div class="drawer-section-title">
-          <i class="fas fa-compass"></i> Core Navigation Pillars
+        <div class="drawer-helpline-note">
+          <i class="fas fa-phone-volume"></i> UAN: [92 42] 111 363 063
         </div>
-        <div class="drawer-links-grid">
-          
-          <!-- 1. HOME PAGE -->
-          <a href="index.html" class="drawer-link-card">
-            <div class="card-icon"><i class="fas fa-home"></i></div>
-            <div class="card-text">
-              <span class="card-title">Home Page <span class="badge-new">Main</span></span>
-              <span class="card-desc">Campus overview, welcome &amp; highlights</span>
-            </div>
-            <i class="fas fa-chevron-right card-arrow"></i>
-          </a>
-
-          <!-- 2. ABOUT US (WITH SUB-PAGES) -->
-          <div class="drawer-card-group">
-            <a href="index.html#welcome" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-landmark"></i></div>
-              <div class="card-text">
-                <span class="card-title">About Us <span class="badge-sub">6 Sub-Pages</span></span>
-                <span class="card-desc">Heritage, leadership, vision &amp; letters</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="index.html#welcome" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-history"></i> Heritage &amp; School Vision</span>
-                <span class="drawer-sublink-badge">Est. 1988</span>
-              </a>
-              <a href="index.html#governors" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-user-shield"></i> Board of Governors</span>
-                <span class="drawer-sublink-badge">Leadership</span>
-              </a>
-              <a href="principals-letters.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-envelope-open-text"></i> Principal's Letters to Parents</span>
-                <span class="drawer-sublink-badge">Official</span>
-              </a>
-              <a href="news-events.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-newspaper"></i> News, Dispatches &amp; Events</span>
-                <span class="drawer-sublink-badge">Latest</span>
-              </a>
-              <a href="old-boys-bulletin.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-book-open"></i> Old Boys' Bulletin (Alumni)</span>
-                <span class="drawer-sublink-badge">Magazine</span>
-              </a>
-              <a href="careers.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-briefcase"></i> Careers at BHSS</span>
-                <span class="drawer-sublink-badge badge-hiring">Hiring</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- 3. OUR SCHOOLS (WITH SUB-PAGES) -->
-          <div class="drawer-card-group">
-            <a href="our-schools.html" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-school"></i></div>
-              <div class="card-text">
-                <span class="card-title">Our Schools (3 Wings) <span class="badge-sub">3 Wings</span></span>
-                <span class="card-desc">Junior, Prep &amp; Senior Schools</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="our-schools.html#junior" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-child"></i> Junior School (Playgroup – Grade 5)</span>
-                <span class="drawer-sublink-badge">Primary</span>
-              </a>
-              <a href="our-schools.html#prep" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-book-reader"></i> Prep School (Grades 6 – 8)</span>
-                <span class="drawer-sublink-badge">Middle</span>
-              </a>
-              <a href="our-schools.html#senior" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-user-graduate"></i> Senior School (Grades 9 – 12)</span>
-                <span class="drawer-sublink-badge">College</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- 4. ACADEMICS (WITH SUB-PAGES) -->
-          <div class="drawer-card-group">
-            <a href="academics.html" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-              <div class="card-text">
-                <span class="card-title">Academics &amp; Dual Pathway <span class="badge-sub">5 Tracks</span></span>
-                <span class="card-desc">Cambridge O/A Levels &amp; Federal Board</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="academics.html#senior" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-award"></i> Cambridge O &amp; A Levels</span>
-                <span class="drawer-sublink-badge">IGCSE</span>
-              </a>
-              <a href="academics.html#senior" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-certificate"></i> Matric &amp; FSc (Pre-Med / Eng / ICS)</span>
-                <span class="drawer-sublink-badge">FBISE</span>
-              </a>
-              <a href="academics.html#curriculum" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-book-open"></i> Dual Curriculum Pathways</span>
-                <span class="drawer-sublink-badge">Pathways</span>
-              </a>
-              <a href="calendar.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-calendar-alt"></i> Academic Term Calendar 2025–26</span>
-                <span class="drawer-sublink-badge">Schedule</span>
-              </a>
-              <a href="downloads.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-download"></i> Syllabus Handbooks &amp; Downloads</span>
-                <span class="drawer-sublink-badge">PDFs</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- 5. BOARDING (WITH SUB-PAGES) -->
-          <div class="drawer-card-group">
-            <a href="boarding.html" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-bed"></i></div>
-              <div class="card-text">
-                <span class="card-title">Boarding Houses (8 Houses) <span class="badge-sub">Hostels</span></span>
-                <span class="card-desc">Full &amp; weekly residential boarding</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="boarding.html#houses" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-building"></i> 8 Residential Boarding Houses</span>
-                <span class="drawer-sublink-badge">Houses</span>
-              </a>
-              <a href="boarding.html#pastoral" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-heartbeat"></i> Pastoral Care &amp; Health Centre</span>
-                <span class="drawer-sublink-badge">24/7 Care</span>
-              </a>
-              <a href="boarding.html#routine" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-utensils"></i> Dining Hall &amp; Daily Routine</span>
-                <span class="drawer-sublink-badge">Routine</span>
-              </a>
-              <a href="boarding.html#admissions" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-clipboard-check"></i> Boarding Admissions Inquiry</span>
-                <span class="drawer-sublink-badge">Apply</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- 6. ADMISSIONS & FEES (WITH SUB-PAGES) -->
-          <div class="drawer-card-group">
-            <a href="index.html#admissions" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-door-open"></i></div>
-              <div class="card-text">
-                <span class="card-title">Admissions &amp; Fees <span class="badge-sub">2025–26</span></span>
-                <span class="card-desc">Criteria, fee schedule &amp; registration</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="index.html#admissions" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-clipboard-list"></i> Admissions Policy &amp; Eligibility</span>
-                <span class="drawer-sublink-badge">Criteria</span>
-              </a>
-              <a href="fee-structure.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-receipt"></i> Fee Structure 2025–26 (Official)</span>
-                <span class="drawer-sublink-badge badge-new">Fees</span>
-              </a>
-              <a href="downloads.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-file-pdf"></i> Download Prospectus &amp; Forms</span>
-                <span class="drawer-sublink-badge">PDF</span>
-              </a>
-              <a href="https://wa.me/923005552477?text=Hello%20BHSS%20Admissions%20Desk" target="_blank" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fab fa-whatsapp"></i> Chat with Admissions Desk</span>
-                <span class="drawer-sublink-badge">Instant</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- 7. CONTACT US (WITH SUB-PAGES) -->
-          <div class="drawer-card-group">
-            <a href="contact.html" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
-              <div class="card-text">
-                <span class="card-title">Contact Us &amp; Directory</span>
-                <span class="card-desc">Campus location, phone lines &amp; email</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="contact.html" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-map-marker-alt"></i> Campus Map &amp; Postal Address</span>
-                <span class="drawer-sublink-badge">Visit</span>
-              </a>
-              <a href="index.html#portal" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-user-lock"></i> Student &amp; Parent Portal Login</span>
-                <span class="drawer-sublink-badge">Portal</span>
-              </a>
-              <a href="tel:+9242111363063" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-phone-volume"></i> UAN: [92 42] 111 363 063</span>
-                <span class="drawer-sublink-badge">Call</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ==============================================
-           STUDENT LIFE & CO-CURRICULAR HUB
-           ============================================== -->
-      <div class="drawer-section">
-        <div class="drawer-section-title">
-          <i class="fas fa-medal"></i> Student Life &amp; Co-Curricular
-        </div>
-        <div class="drawer-links-grid">
-          <!-- Sports with Sub-Pages -->
-          <div class="drawer-card-group">
-            <a href="sports.html" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-running"></i></div>
-              <div class="card-text">
-                <span class="card-title">Sports &amp; Athletics</span>
-                <span class="card-desc">Olympic pool, equestrian, cricket, tennis</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="sports.html#facilities" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-swimming-pool"></i> Olympic Swimming Pool</span>
-                <span class="drawer-sublink-badge">Heated</span>
-              </a>
-              <a href="sports.html#facilities" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-horse"></i> Riding Club &amp; Equestrian Arena</span>
-                <span class="drawer-sublink-badge">Stables</span>
-              </a>
-              <a href="sports.html#sports-grid" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-baseball-ball"></i> Cricket, Tennis &amp; Squash Courts</span>
-                <span class="drawer-sublink-badge">Academy</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Clubs with Sub-Pages -->
-          <div class="drawer-card-group">
-            <a href="clubs-societies.html" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-users-cog"></i></div>
-              <div class="card-text">
-                <span class="card-title">Clubs &amp; Societies (62 Clubs)</span>
-                <span class="card-desc">Debates, science, drama, arts, robotics</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="clubs-societies.html#clubs-grid" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-comments"></i> Debating &amp; Model UN (MUN)</span>
-                <span class="drawer-sublink-badge">MUN</span>
-              </a>
-              <a href="clubs-societies.html#clubs-grid" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-microchip"></i> Robotics, AI &amp; Science Club</span>
-                <span class="drawer-sublink-badge">STEM</span>
-              </a>
-              <a href="clubs-societies.html#clubs-grid" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-palette"></i> Arts, Drama &amp; Literary Society</span>
-                <span class="drawer-sublink-badge">Creative</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Gallery with Sub-Pages -->
-          <div class="drawer-card-group">
-            <a href="gallery.html" class="drawer-link-card">
-              <div class="card-icon"><i class="fas fa-camera-retro"></i></div>
-              <div class="card-text">
-                <span class="card-title">Events &amp; Campus Photo Gallery</span>
-                <span class="card-desc">Sports galas, galas &amp; architecture</span>
-              </div>
-              <i class="fas fa-chevron-down card-arrow"></i>
-            </a>
-            <div class="drawer-sublinks">
-              <a href="gallery.html#sports" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-trophy"></i> Annual Sports Day &amp; Swimming Galas</span>
-                <span class="drawer-sublink-badge">Galas</span>
-              </a>
-              <a href="gallery.html#campus" class="drawer-sublink">
-                <span class="drawer-sublink-content"><i class="fas fa-landmark"></i> Heritage Campus Architecture</span>
-                <span class="drawer-sublink-badge">Campus</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Drawer Footer Contact Info -->
-      <div class="drawer-footer-contact">
-        <div class="contact-line">
-          <i class="fas fa-phone-alt"></i> <span>UAN: [92 42] 111 363 063</span>
-        </div>
-        <div class="contact-line">
-          <i class="fab fa-whatsapp text-success"></i> <span>WhatsApp: +92 300 5552477</span>
-        </div>
-        <div class="contact-line">
-          <i class="fas fa-envelope"></i> <span>principal@bhss.edu.pk</span>
-        </div>
-        <a href="index.html#portal" class="drawer-portal-btn">
-          <i class="fas fa-user-lock"></i> Student &amp; Parent Portal Login
-        </a>
       </div>
     </div>
   </aside>
@@ -1153,7 +949,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/main.js?v=4.0"></script>
+  <script src="js/main.js?v=4.2"></script>
   <script>
     // Lightbox Modal for Photo Gallery
     const lightbox = document.getElementById('photoLightbox');

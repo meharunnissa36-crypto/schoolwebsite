@@ -496,7 +496,36 @@ function initMobileNav() {
     });
   });
 
-  // Mobile accordion for dropdown menus
+  // Mobile drawer accordion submenu toggle
+  const drawerToggles = document.querySelectorAll('.drawer-nav-toggle');
+  drawerToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const parentItem = toggle.closest('.drawer-nav-item');
+      if (!parentItem) return;
+      const isCurrentlyOpen = parentItem.classList.contains('open');
+
+      // Close other open accordions
+      document.querySelectorAll('.drawer-nav-item.open').forEach(openItem => {
+        if (openItem !== parentItem) {
+          openItem.classList.remove('open');
+          const btn = openItem.querySelector('.drawer-nav-toggle');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (isCurrentlyOpen) {
+        parentItem.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      } else {
+        parentItem.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Mobile accordion for desktop fallback dropdown menus
   const navItemsWithDrop = document.querySelectorAll('.nav-item');
   navItemsWithDrop.forEach(item => {
     const link = item.querySelector('.nav-link');
