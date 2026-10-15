@@ -1044,6 +1044,64 @@ ul, ol {
   letter-spacing: 0.5px;
 }
 
+.badge-sub {
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(212, 175, 55, 0.18);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--color-gold-light);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* Fast Access Action Strip in Mobile Drawer */
+.drawer-quick-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.strip-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.strip-apply {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.strip-portal {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-light) !important;
+}
+
+.strip-uan {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF !important;
+}
+
+.strip-btn:hover,
+.strip-btn:active {
+  transform: translateY(-1px);
+}
+
 /* Drawer Instant Search Filter */
 .drawer-search-wrap {
   position: relative;
