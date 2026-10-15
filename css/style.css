@@ -3884,3 +3884,157 @@ ul, ol {
   }
 }
 
+/* ==========================================================================
+   20. MASTER MOBILE RESPONSIVENESS (FULL-WIDTH MOBILE DRAWER & ZERO-OVERFLOW)
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* Prevent horizontal scroll globally on all mobile devices */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  /* Full Screen Mobile Navigation Drawer Hub */
+  .site-drawer {
+    width: 100vw !important;
+    max-width: 100% !important;
+    right: 0 !important;
+    border-left: none !important;
+  }
+
+  .site-drawer .drawer-header {
+    padding: 16px 18px !important;
+    background: rgba(4, 13, 29, 0.98) !important;
+  }
+
+  .site-drawer .drawer-title {
+    font-size: 1.1rem !important;
+  }
+
+  .site-drawer .drawer-close {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.15rem !important;
+  }
+
+  .site-drawer .drawer-body {
+    padding: 16px 16px 36px !important;
+  }
+
+  /* Touch-friendly drawer card & sub-link tap targets */
+  .drawer-link-card {
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+  }
+
+  .drawer-link-card .card-title {
+    font-size: 0.88rem !important;
+  }
+
+  .drawer-sublinks {
+    margin-left: 14px !important;
+    padding-left: 12px !important;
+    gap: 4px !important;
+  }
+
+  .drawer-sublink {
+    padding: 9px 12px !important;
+    font-size: 0.84rem !important;
+    border-radius: 6px !important;
+  }
+
+  .drawer-sublink-content {
+    font-weight: 500 !important;
+  }
+
+  /* Mobile Header Zero-Warp */
+  .main-header {
+    width: 100% !important;
+  }
+
+  .main-header .container {
+    padding: 0 16px !important;
+    height: 70px !important;
+    gap: 10px !important;
+  }
+
+  .brand-crest {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .brand-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .brand-tagline {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.8px !important;
+  }
+
+  .header-actions {
+    gap: 8px !important;
+  }
+
+  .btn-search {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .hamburger-btn {
+    padding: 7px 11px !important;
+  }
+
+  .hamburger-text {
+    font-size: 0.72rem !important;
+  }
+
+  /* Subpage Hero Responsiveness */
+  .subpage-hero {
+    height: 250px !important;
+    min-height: 230px !important;
+  }
+
+  .subpage-hero-title,
+  .subpage-title {
+    font-size: clamp(1.75rem, 6.5vw, 2.3rem) !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  /* Breadcrumb Bar Mobile */
+  .careers-breadcrumb,
+  .breadcrumb-bar {
+    padding: 10px 0 !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Content & Container Spacing */
+  .page-content,
+  main.page-content {
+    padding: 35px 0 !important;
+  }
+
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Tables: Auto smooth horizontal scrolling without layout breaking */
+  table,
+  .routine-table,
+  .fee-table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Images: Always strictly scaled to viewport */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
