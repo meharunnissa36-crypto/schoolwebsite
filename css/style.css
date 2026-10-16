@@ -2363,11 +2363,21 @@ ul, ol {
 .aitchison-footer-grid,
 .footer-container {
   display: grid;
-  grid-template-columns: 1.4fr 1.15fr 1fr 1.25fr;
+  grid-template-columns: 1.35fr 1fr 1fr 1.25fr;
   gap: 36px;
   padding-bottom: 50px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
+  align-items: start;
+}
+
+/* Ensure no column blowout in CSS Grid */
+.footer-column,
+.footer-col,
+.footer-brand,
+.col-brand,
+.aitchison-footer-crest-col,
+.aitchison-footer-col {
+  min-width: 0;
 }
 
 /* Brand Column */
@@ -2427,6 +2437,8 @@ ul, ol {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.76);
   margin-bottom: 22px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .footer-social-links {
@@ -2511,6 +2523,8 @@ ul, ol {
   align-items: center;
   gap: 8px;
   text-decoration: none;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .footer-links-list a i,
@@ -2519,6 +2533,7 @@ ul, ol {
   font-size: 0.65rem;
   color: var(--color-gold);
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .footer-links-list a:hover,
@@ -2555,6 +2570,8 @@ ul, ol {
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.55;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-info-item i,
@@ -2567,11 +2584,18 @@ ul, ol {
   text-align: center;
 }
 
+.contact-info-item span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
 .contact-info-item a,
 .footer-contact-list li a {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   transition: color var(--transition-fast);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-info-item a:hover,
@@ -2579,7 +2603,7 @@ ul, ol {
   color: var(--color-gold-light);
 }
 
-/* Footer Bottom Strip */
+/* Footer Bottom Strip (Full-Width Edge-to-Edge) */
 .footer-bottom,
 .footer-bottom-strip,
 .sub-footer,
@@ -2587,7 +2611,9 @@ ul, ol {
   padding: 22px 0;
   font-size: 0.84rem;
   color: rgba(255, 255, 255, 0.65);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
 }
 
 .footer-bottom .container,
@@ -2599,6 +2625,7 @@ ul, ol {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+  width: 100%;
 }
 
 .footer-bottom-links {
@@ -2632,6 +2659,7 @@ ul, ol {
   text-decoration: none;
   transition: all var(--transition-fast);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
 }
 
 .facebook-badge-link:hover {
@@ -2667,14 +2695,161 @@ ul, ol {
 }
 
 /* ==========================================================================
+   UNIVERSAL LIGHTBOX & MODAL COMPONENT STYLES
+   Ensures modals on Sports, Boarding, Gallery, News never break in-flow layout
+   ========================================================================== */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 13, 29, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-modal.active,
+.lightbox-modal.open {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 900px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-gold, #D4AF37);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.15);
+  color: #FFFFFF;
+}
+
+.lightbox-caption-text {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 14px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Universal Stay Updated Callout Section (For News, Principal Letters, etc.) */
+.stay-updated-section,
+.stay-updated-callout {
+  background: #FFFFFF;
+  padding: 50px 0 60px;
+  border-top: 1px solid #E2E8F0;
+  width: 100%;
+}
+
+.stay-updated-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stay-updated-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #64748B;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.stay-updated-row,
+.stay-updated-headline-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.stay-updated-headline,
+.stay-updated-title {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: #081B3A;
+  letter-spacing: 2px;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.stay-updated-link-box,
+.stay-updated-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.stay-updated-visit {
+  font-size: 1.05rem;
+  color: #64748B;
+}
+
+.stay-updated-brand-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0369A1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.stay-updated-brand-link:hover {
+  color: #EAA023;
+  text-decoration: underline;
+}
+
+.stay-updated-desc {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+
+/* ==========================================================================
    MEGA FOOTER RESPONSIVE SYSTEM (TABLET & MOBILE OPTIMIZATIONS)
    ========================================================================== */
-@media (max-width: 1024px) {
+@media (max-width: 1140px) {
   .footer-top,
   .aitchison-footer-grid,
   .footer-container {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 36px 30px !important;
+    gap: 40px 32px !important;
     padding-bottom: 40px !important;
   }
 }
@@ -2683,7 +2858,7 @@ ul, ol {
   .site-footer,
   .main-footer,
   .aitchison-style-footer {
-    padding-top: 50px !important;
+    padding-top: 48px !important;
   }
 
   .footer-top,
@@ -2691,7 +2866,7 @@ ul, ol {
   .footer-container {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
-    padding-bottom: 35px !important;
+    padding-bottom: 32px !important;
   }
 
   .footer-brand,
@@ -2714,6 +2889,8 @@ ul, ol {
     align-items: center !important;
     text-align: center !important;
     gap: 16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
   .footer-bottom p,
@@ -2729,6 +2906,7 @@ ul, ol {
     justify-content: center !important;
     flex-wrap: wrap !important;
     gap: 12px 16px !important;
+    width: 100% !important;
   }
 }
 
@@ -2740,8 +2918,8 @@ ul, ol {
 
   .footer-crest,
   .aitchison-footer-crest-img {
-    width: 54px;
-    height: 54px;
+    width: 52px;
+    height: 52px;
   }
 
   .footer-brand-title,
@@ -2750,12 +2928,17 @@ ul, ol {
   }
 
   .footer-bottom-links {
-    gap: 10px 14px;
+    gap: 10px 14px !important;
+  }
+
+  .footer-bottom-links a {
+    font-size: 0.8rem !important;
   }
 
   .facebook-badge-link {
-    width: 100%;
-    justify-content: center;
+    width: 100% !important;
+    justify-content: center !important;
+    margin-bottom: 4px;
   }
 }
 
