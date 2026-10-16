@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Core & Custom Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=4.3">
+  <link rel="stylesheet" href="css/style.css?v=4.4">
   <link rel="stylesheet" href="css/gallery-events.css">
 </head>
 <body class="gallery-page">
@@ -167,192 +167,90 @@
 
       <!-- Category Filter Tabs Navigation -->
       <div class="gallery-filter-nav" role="tablist" aria-label="Gallery Categories">
-        <button class="gallery-filter-btn active" data-filter="all" role="tab" aria-selected="true">Events</button>
-        <button class="gallery-filter-btn" data-filter="school" role="tab" aria-selected="false">Around the Schools</button>
-        <button class="gallery-filter-btn" data-filter="sports" role="tab" aria-selected="false">Sports</button>
-        <button class="gallery-filter-btn" data-filter="architecture" role="tab" aria-selected="false">Architecture</button>
-        <button class="gallery-filter-btn" data-filter="grounds" role="tab" aria-selected="false">Grounds and Fields</button>
+        <button class="gallery-filter-btn active" data-filter="all" role="tab" aria-selected="true">All Photos (19)</button>
+        <button class="gallery-filter-btn" data-filter="results" role="tab" aria-selected="false">Board Results 2026</button>
+        <button class="gallery-filter-btn" data-filter="dreams" role="tab" aria-selected="false">Future Leaders &amp; Dreams</button>
+        <button class="gallery-filter-btn" data-filter="campus" role="tab" aria-selected="false">Campus &amp; Building</button>
       </div>
 
       <!-- 4-Column Photo Grid (Matches Screenshot Layout) -->
       <div class="gallery-grid" id="galleryGrid">
-        <!-- Premier Card: Basharat School System Khewa Campus Building -->
-        <div class="gallery-card" data-category="architecture" onclick="openLightbox(this)" title="Basharat School System Campus Building & Playgrounds, Khewa">
-          <img src="images/school-building.jpg" alt="Basharat School System Campus Building and Gardens in Khewa, Mandi Bahauddin" class="gallery-card-img">
-          <div class="gallery-card-caption">Main Campus &amp; Playgrounds (Khewa, Mandi Bahauddin)</div>
+        <div class="gallery-card" data-category="campus" onclick="openLightbox(this)" title="Basharat School System Campus Building &amp; Gardens">
+          <img src="images/school-building.jpg" alt="Basharat School System Campus Building &amp; Gardens" class="gallery-card-img">
+          <div class="gallery-card-caption">Main Campus Building &amp; Playgrounds (Khewa, Mandi Bahauddin)</div>
         </div>
-
-        <!-- Row 1 -->
-        <div class="gallery-card" data-category="school" onclick="openLightbox(this)" title="House Trophy Winners Assembly">
-          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="House Trophy Winners" class="gallery-card-img">
-          <div class="gallery-card-caption">House Trophy Assembly</div>
+        <div class="gallery-card" data-category="campus" onclick="openLightbox(this)" title="Computer &amp; Coding Classroom Celebration">
+          <img src="images/classroom-celebration.jpg" alt="Computer &amp; Coding Classroom Celebration" class="gallery-card-img">
+          <div class="gallery-card-caption">Python Coding Lab &amp; Position Holder Celebration</div>
         </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Junior PT Display & March">
-          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Junior PT Display" class="gallery-card-img">
-          <div class="gallery-card-caption">Junior PT Display &amp; March</div>
+        <div class="gallery-card" data-category="results" onclick="openLightbox(this)" title="100% Result in 9th Class Board Exam 2026 &amp; Admissions Open">
+          <img src="images/results-banner-2026.jpg" alt="100% Result in 9th Class Board Exam 2026 &amp; Admissions Open" class="gallery-card-img">
+          <div class="gallery-card-caption">100% Board Result 2026 (BISE Gujranwala) - Admissions Open</div>
         </div>
-
-        <!-- Featured Overlay: SCHOOL SPORTS DAY 2026 -->
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="School Sports Day 2026">
-          <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=800&q=80" alt="School Sports Day 2026" class="gallery-card-img">
-          <div class="gallery-featured-overlay">
-            <span class="gallery-featured-title">SCHOOL SPORTS<br>DAY 2026</span>
-          </div>
+        <div class="gallery-card" data-category="results" onclick="openLightbox(this)" title="Imama Zainab - 1st Position (516/555 Marks)">
+          <img src="images/topper-imama-zainab.jpg" alt="Imama Zainab - 1st Position (516/555 Marks)" class="gallery-card-img">
+          <div class="gallery-card-caption">Imama Zainab (1st Position - 516/555 Marks, Roll: 228687)</div>
         </div>
-
-        <div class="gallery-card" data-category="events" onclick="openLightbox(this)" title="Chief Guest Ribbon Cutting">
-          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" alt="Ceremonial Ribbon Cutting" class="gallery-card-img">
-          <div class="gallery-card-caption">Ceremonial Opening</div>
+        <div class="gallery-card" data-category="results" onclick="openLightbox(this)" title="Board Examination 2026 Merit List &amp; Trophy Winners">
+          <img src="images/toppers-merit-list.jpg" alt="Board Examination 2026 Merit List &amp; Trophy Winners" class="gallery-card-img">
+          <div class="gallery-card-caption">Board Toppers Merit List &amp; Distinction Holders 2026</div>
         </div>
-
-        <!-- Row 2 -->
-        <div class="gallery-card" data-category="architecture" onclick="openLightbox(this)" title="National Flag Hoisting at Quadrangle">
-          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="Flag Hoisting Quadrangle" class="gallery-card-img">
-          <div class="gallery-card-caption">Quadrangle Flag Hoisting</div>
+        <div class="gallery-card" data-category="results" onclick="openLightbox(this)" title="الحمدللہ گوجرانوالہ بورڈ میں نمایاں پوزیشن - سالانہ رزلٹ 2026">
+          <img src="images/urdu-flex-banner.jpg" alt="الحمدللہ گوجرانوالہ بورڈ میں نمایاں پوزیشن - سالانہ رزلٹ 2026" class="gallery-card-img">
+          <div class="gallery-card-caption">Official Board Result Flex Banner (Mandi Bahauddin)</div>
         </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Aerobics & Gymnastics Display">
-          <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80" alt="Aerobics and Gymnastics" class="gallery-card-img">
-          <div class="gallery-card-caption">Gymnastics Display</div>
+        <div class="gallery-card" data-category="results" onclick="openLightbox(this)" title="بشارت سکول سسٹم کھیوہ - بورڈ پوزیشن ہولڈرز">
+          <img src="images/urdu-flex-banner-wide.jpg" alt="بشارت سکول سسٹم کھیوہ - بورڈ پوزیشن ہولڈرز" class="gallery-card-img">
+          <div class="gallery-card-caption">Urdu Celebration Banner - Basharat School System Khewa</div>
         </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Track & Field Ribbon Ceremony">
-          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80" alt="Track Ribbon Ceremony" class="gallery-card-img">
-          <div class="gallery-card-caption">Track Ribbon Ceremony</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Doctor - Medicine &amp; Healthcare">
+          <img src="images/dreams/dream-doctor.jpg" alt="My Dream: Doctor - Medicine &amp; Healthcare" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Doctor (Medicine, Science &amp; Compassion)</div>
         </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Equestrian Team & Tent Pegging">
-          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80" alt="Equestrian Team" class="gallery-card-img">
-          <div class="gallery-card-caption">Equestrian Cavalcade</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Physician - Healing &amp; Service">
+          <img src="images/dreams/dream-doctor-future.jpg" alt="My Dream: Physician - Healing &amp; Service" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Future Physician (Health &amp; Service)</div>
         </div>
-
-        <!-- Row 3 -->
-        <div class="gallery-card" data-category="school" onclick="openLightbox(this)" title="Senior Prefects Investiture Body">
-          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=800&q=80" alt="Prefects Investiture" class="gallery-card-img">
-          <div class="gallery-card-caption">Prefectorial Body</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Data Analyst - Data Science &amp; AI">
+          <img src="images/dreams/dream-data-analyst.jpg" alt="My Dream: Data Analyst - Data Science &amp; AI" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Data Analyst (Data Science &amp; Python)</div>
         </div>
-
-        <div class="gallery-card" data-category="school" onclick="openLightbox(this)" title="House Master Address">
-          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="House Master Address" class="gallery-card-img">
-          <div class="gallery-card-caption">House Master Address</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Scientist - Chemical Laboratory &amp; Discovery">
+          <img src="images/dreams/dream-scientist-lab.jpg" alt="My Dream: Scientist - Chemical Laboratory &amp; Discovery" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Scientist (Lab Research &amp; Chemistry)</div>
         </div>
-
-        <div class="gallery-card" data-category="events" onclick="openLightbox(this)" title="Inter-School Science Olympiad Team">
-          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Science Olympiad" class="gallery-card-img">
-          <div class="gallery-card-caption">Science Olympiad Champions</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Research Scientist - Curious Minds">
+          <img src="images/dreams/dream-scientist.jpg" alt="My Dream: Research Scientist - Curious Minds" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Scientist (Innovation &amp; Knowledge)</div>
         </div>
-
-        <div class="gallery-card" data-category="events" onclick="openLightbox(this)" title="Model United Nations Chamber">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="MUN Chamber" class="gallery-card-img">
-          <div class="gallery-card-caption">Model United Nations Chamber</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Commercial Pilot - Aviation &amp; Sky">
+          <img src="images/dreams/dream-pilot.jpg" alt="My Dream: Commercial Pilot - Aviation &amp; Sky" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Pilot (Aviation &amp; High Flying)</div>
         </div>
-
-        <!-- Row 4 -->
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Inter-House Swimming Gala">
-          <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80" alt="Swimming Gala" class="gallery-card-img">
-          <div class="gallery-card-caption">Swimming Gala Medallists</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Airline Captain - Leadership in Aviation">
+          <img src="images/dreams/dream-pilot-captain.jpg" alt="My Dream: Airline Captain - Leadership in Aviation" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Airline Captain (Big Dreams Start Here)</div>
         </div>
-
-        <div class="gallery-card" data-category="architecture" onclick="openLightbox(this)" title="Heritage Colonial Clock Tower">
-          <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="Clock Tower" class="gallery-card-img">
-          <div class="gallery-card-caption">Heritage Clock Tower</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Architect &amp; Civil Engineer - Building Tomorrow">
+          <img src="images/dreams/dream-architect.jpg" alt="My Dream: Architect &amp; Civil Engineer - Building Tomorrow" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Architect (Civil Engineering &amp; Design)</div>
         </div>
-
-        <div class="gallery-card" data-category="events" onclick="openLightbox(this)" title="Distinguished Speaker at Jubilee Hall">
-          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Distinguished Speaker" class="gallery-card-img">
-          <div class="gallery-card-caption">Distinguished Speaker</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Lawyer - Justice, Truth &amp; Constitution">
+          <img src="images/dreams/dream-lawyer.jpg" alt="My Dream: Lawyer - Justice, Truth &amp; Constitution" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Lawyer (Constitution of Pakistan &amp; Law)</div>
         </div>
-
-        <div class="gallery-card" data-category="events" onclick="openLightbox(this)" title="Senior Elocution Competition">
-          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" alt="Senior Elocution" class="gallery-card-img">
-          <div class="gallery-card-caption">Senior Elocution Competition</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Astronaut - Space Exploration &amp; Science">
+          <img src="images/dreams/dream-astronaut.jpg" alt="My Dream: Astronaut - Space Exploration &amp; Science" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Astronaut (Space Science &amp; Discovery)</div>
         </div>
-
-        <!-- Row 5 -->
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Horse Show Jumping Trials">
-          <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80" alt="Horse Show Jumping" class="gallery-card-img">
-          <div class="gallery-card-caption">Show Jumping Trials</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Journalist - Media Studies &amp; Public Speaking">
+          <img src="images/dreams/dream-journalist.jpg" alt="My Dream: Journalist - Media Studies &amp; Public Speaking" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Journalist (Truth, Voice &amp; Media)</div>
         </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Inter-House Field Hockey Championship">
-          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" alt="Field Hockey" class="gallery-card-img">
-          <div class="gallery-card-caption">Field Hockey Championship</div>
+        <div class="gallery-card" data-category="dreams" onclick="openLightbox(this)" title="My Dream: Police Officer - Leadership, Courage &amp; Service">
+          <img src="images/dreams/dream-police-officer.jpg" alt="My Dream: Police Officer - Leadership, Courage &amp; Service" class="gallery-card-img">
+          <div class="gallery-card-caption">My Dream: Police Officer (Discipline, Service &amp; Courage)</div>
         </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Equestrian Obstacle Course">
-          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Equestrian Obstacle" class="gallery-card-img">
-          <div class="gallery-card-caption">Obstacle Course Clear</div>
-        </div>
-
-        <div class="gallery-card" data-category="grounds" onclick="openLightbox(this)" title="Main Oval Cricket Pavilion Crowd">
-          <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80" alt="Cricket Pavilion" class="gallery-card-img">
-          <div class="gallery-card-caption">Main Oval Pavilion Crowd</div>
-        </div>
-
-        <!-- Row 6 -->
-        <div class="gallery-card" data-category="school" onclick="openLightbox(this)" title="Debate Chamber Resolution">
-          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="Debate Resolution" class="gallery-card-img">
-          <div class="gallery-card-caption">Debate Chamber Resolution</div>
-        </div>
-
-        <div class="gallery-card" data-category="grounds" onclick="openLightbox(this)" title="Sprint 100m Heats">
-          <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80" alt="100m Sprint" class="gallery-card-img">
-          <div class="gallery-card-caption">100m Sprint Heats</div>
-        </div>
-
-        <div class="gallery-card" data-category="events" onclick="openLightbox(this)" title="Annual Shakespeare Play Production">
-          <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=800&q=80" alt="Shakespeare Production" class="gallery-card-img">
-          <div class="gallery-card-caption">Shakespearean Theatre</div>
-        </div>
-
-        <div class="gallery-card" data-category="events" onclick="openLightbox(this)" title="Literary Society Colloquium">
-          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" alt="Literary Colloquium" class="gallery-card-img">
-          <div class="gallery-card-caption">Literary Colloquium</div>
-        </div>
-
-        <!-- Row 7 -->
-        <div class="gallery-card" data-category="school" onclick="openLightbox(this)" title="Robotics and Automation Showcase">
-          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robotics Showcase" class="gallery-card-img">
-          <div class="gallery-card-caption">Robotics Showcase</div>
-        </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Tent Pegging Sprint Finish">
-          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Tent Pegging Sprint" class="gallery-card-img">
-          <div class="gallery-card-caption">Tent Pegging Gallop</div>
-        </div>
-
-        <div class="gallery-card" data-category="events" onclick="openLightbox(this)" title="Founders Day Dignitaries Reception">
-          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Dignitaries Reception" class="gallery-card-img">
-          <div class="gallery-card-caption">Founders Day Reception</div>
-        </div>
-
-        <div class="gallery-card" data-category="grounds" onclick="openLightbox(this)" title="Lawn ART Installation Exhibition">
-          <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80" alt="ART Lawn Installation" class="gallery-card-img">
-          <div class="gallery-card-caption">Campus ART Installation</div>
-        </div>
-
-        <!-- Row 8 -->
-        <div class="gallery-card" data-category="grounds" onclick="openLightbox(this)" title="Annual Cross-Country Marathon">
-          <img src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&w=800&q=80" alt="Cross-Country Marathon" class="gallery-card-img">
-          <div class="gallery-card-caption">Cross-Country Marathon</div>
-        </div>
-
-        <div class="gallery-card" data-category="school" onclick="openLightbox(this)" title="Boarding House Common Room Evening">
-          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Boarding House Evening" class="gallery-card-img">
-          <div class="gallery-card-caption">Boarding House Common Room</div>
-        </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Athletic Squad Warm-up Drills">
-          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Squad Drills" class="gallery-card-img">
-          <div class="gallery-card-caption">Athletic Squad Drills</div>
-        </div>
-
-        <div class="gallery-card" data-category="sports" onclick="openLightbox(this)" title="Inter-House 4x100m Relay Finals">
-          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80" alt="4x100m Relay Finals" class="gallery-card-img">
-          <div class="gallery-card-caption">4x100m Relay Finals</div>
-        </div>
-
       </div>
     </div>
   </main>
@@ -639,7 +537,7 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="js/main.js?v=4.3"></script>
+  <script src="js/main.js?v=4.4"></script>
   <script>
     // Gallery Category Filter Tabs
     var filterButtons = document.querySelectorAll('.gallery-filter-btn');
