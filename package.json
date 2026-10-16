@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Official Website of Basharat Higher Secondary School (BHSS)",
   "scripts": {
-    "start": "node serve.js"
+    "start": "node serve.js",
+    "build": "echo 'Build successful'"
   },
   "keywords": [
     "school",
