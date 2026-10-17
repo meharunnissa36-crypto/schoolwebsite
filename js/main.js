@@ -342,7 +342,7 @@ function initModals() {
           whatsappBtn.disabled = true;
         }
 
-        const schoolWhatsApp = "923117684088";
+        const schoolWhatsApp = "923338011180";
         const messageText = 
 `*ADMISSION INQUIRY - BASHARAT HIGHER SECONDARY SCHOOL*
 🏛 *Session:* 2026–2027
