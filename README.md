@@ -1,4 +1,4 @@
-﻿# Basharat Higher Secondary School (BHSS) - Official Web Portal
+# Basharat Higher Secondary School (BHSS) - Official Web Portal
 
 Welcome to the official web portal repository for **Basharat Higher Secondary School (BHSS)**. This repository houses the complete, responsive multi-page web platform featuring heritage aesthetics, academic curriculum pathways, boarding house wings, news, and admissions portals.
 
@@ -16,4 +16,4 @@ This project is configured for one-click deployment on [Vercel](https://vercel.c
 4. Deploy!
 
 ## 📄 License
-© 2025–2026 Basharat Higher Secondary School. All rights reserved.
+© 2026–2027 Basharat Higher Secondary School. All rights reserved.

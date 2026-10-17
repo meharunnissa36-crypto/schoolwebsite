@@ -345,7 +345,7 @@ function initModals() {
         const schoolWhatsApp = "923117684088";
         const messageText = 
 `*ADMISSION INQUIRY - BASHARAT HIGHER SECONDARY SCHOOL*
-🏛 *Session:* 2025–2026
+🏛 *Session:* 2026–2027
 
 👤 *Student Name:* ${data.studentName}
 📅 *Date of Birth:* ${data.studentDob}
