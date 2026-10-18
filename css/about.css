@@ -955,3 +955,57 @@
     font-size: 2rem !important;
   }
 }
+
+
+/* Staff Credentials Meta & Banner */
+.staff-meta-pill {
+  font-size: 0.74rem;
+  color: var(--color-navy, #081B3A);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin: 4px 0 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.staff-meta-pill i {
+  color: #B45309;
+}
+
+.staff-parentage {
+  font-size: 0.76rem;
+  color: #64748B;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.staff-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: #081B3A;
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  padding: 3px 9px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+}
+
+.staff-banner-btn:hover {
+  background: #081B3A;
+  color: #FFFFFF;
+  border-color: #081B3A;
+}
+
+.staff-banner-btn i {
+  color: var(--color-gold, #D4AF37);
+}
