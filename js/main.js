@@ -410,7 +410,7 @@ Assalam-o-Alaikum! Please provide the prospectus and admission test schedule. Th
   const searchBtn = document.querySelector('.btn-search');
   if (searchBtn) {
     searchBtn.addEventListener('click', () => {
-      const query = prompt("Search Basharat Higher Secondary School:\n(e.g., Admissions, FSc Pre-Medical, Horse Riding, Fee Structure, Cambridge IGCSE)");
+      const query = prompt("Search Basharat Higher Secondary School:\n(e.g., Admissions, Matric, FSc Pre-Medical, Fee Structure, Sports)");
       if (query && query.trim()) {
         showToast(`Searching campus resources for: "${query}"...`);
       }
