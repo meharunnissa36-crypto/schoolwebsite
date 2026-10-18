@@ -4538,3 +4538,32 @@ ul, ol {
   color: var(--color-gold);
   text-decoration: underline;
 }
+
+/* Staff Section Responsive */
+@media (max-width: 768px) {
+  .staff-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+    gap: 18px !important;
+  }
+  .staff-card {
+    padding: 22px 16px 20px !important;
+  }
+  .staff-avatar-wrap,
+  .staff-avatar-circle {
+    width: 115px !important;
+    height: 115px !important;
+  }
+  .staff-category-heading {
+    font-size: 1.35rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 330px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
