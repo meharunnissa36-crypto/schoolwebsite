@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=5.1">
+  <link rel="stylesheet" href="css/style.css?v=5.2">
   <link rel="stylesheet" href="css/our-schools.css">
   <link rel="stylesheet" href="css/careers.css">
 </head>
@@ -179,26 +179,26 @@
       </div>
 
       <!-- Core Institutional Highlights Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px;">
-        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-top: 3.5px solid #D4AF37; border-radius: 10px; padding: 24px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <i class="fas fa-award" style="font-size: 2.2rem; color: #D4AF37; margin-bottom: 12px;"></i>
-          <h3 style="font-family: var(--font-heading, 'Playfair Display'); color: #081B3A; font-size: 1.15rem; margin-bottom: 6px;">BISE GRW Affiliated</h3>
-          <p style="font-size: 0.88rem; color: #64748B; margin: 0; line-height: 1.5;">Accredited board curriculum with top marks and 100% board pass track record.</p>
+      <div class="about-highlights-grid">
+        <div class="about-highlight-card anim-reveal">
+          <i class="fas fa-award about-highlight-icon"></i>
+          <h3 class="about-highlight-title">BISE GRW Affiliated</h3>
+          <p class="about-highlight-desc">Accredited board curriculum with top marks and 100% board pass track record.</p>
         </div>
-        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-top: 3.5px solid #081B3A; border-radius: 10px; padding: 24px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <i class="fas fa-chalkboard-teacher" style="font-size: 2.2rem; color: #081B3A; margin-bottom: 12px;"></i>
-          <h3 style="font-family: var(--font-heading, 'Playfair Display'); color: #081B3A; font-size: 1.15rem; margin-bottom: 6px;">Expert Faculty</h3>
-          <p style="font-size: 0.88rem; color: #64748B; margin: 0; line-height: 1.5;">Experienced subject masters committed to analytical concept building.</p>
+        <div class="about-highlight-card navy-accent anim-reveal">
+          <i class="fas fa-chalkboard-teacher about-highlight-icon"></i>
+          <h3 class="about-highlight-title">Expert Faculty</h3>
+          <p class="about-highlight-desc">Experienced subject masters committed to analytical concept building.</p>
         </div>
-        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-top: 3.5px solid #D4AF37; border-radius: 10px; padding: 24px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <i class="fas fa-female" style="font-size: 2.2rem; color: #D4AF37; margin-bottom: 12px;"></i>
-          <h3 style="font-family: var(--font-heading, 'Playfair Display'); color: #081B3A; font-size: 1.15rem; margin-bottom: 6px;">Girls College Wing</h3>
-          <p style="font-size: 0.88rem; color: #64748B; margin: 0; line-height: 1.5;">Dedicated, secure Higher Secondary campus for FSc &amp; ICS intermediate.</p>
+        <div class="about-highlight-card anim-reveal">
+          <i class="fas fa-female about-highlight-icon"></i>
+          <h3 class="about-highlight-title">Girls College Wing</h3>
+          <p class="about-highlight-desc">Dedicated, secure Higher Secondary campus for FSc &amp; ICS intermediate.</p>
         </div>
-        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-top: 3.5px solid #081B3A; border-radius: 10px; padding: 24px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <i class="fas fa-star-and-crescent" style="font-size: 2.2rem; color: #081B3A; margin-bottom: 12px;"></i>
-          <h3 style="font-family: var(--font-heading, 'Playfair Display'); color: #081B3A; font-size: 1.15rem; margin-bottom: 6px;">Moral Tarbiyah</h3>
-          <p style="font-size: 0.88rem; color: #64748B; margin: 0; line-height: 1.5;">Islamic character building, discipline, civic manners, and lifelong values.</p>
+        <div class="about-highlight-card navy-accent anim-reveal">
+          <i class="fas fa-star-and-crescent about-highlight-icon"></i>
+          <h3 class="about-highlight-title">Moral Tarbiyah</h3>
+          <p class="about-highlight-desc">Islamic character building, discipline, civic manners, and lifelong values.</p>
         </div>
       </div>
     </div>
@@ -250,9 +250,7 @@
             </div>
             <h4 class="staff-name">Tahira Erum</h4>
             <span class="staff-designation">Principal</span>
-            <a href="mailto:principal@bhss.ac.pk" class="staff-email-btn" title="Email Tahira Erum">
-              <i class="fas fa-envelope"></i> principal@bhss.ac.pk
-            </a>
+            <a href="mailto:principal@bhss.ac.pk" class="staff-email-btn" title="Email Tahira Erum" title="Email principal@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">principal@bhss.ac.pk</span></a>
           </div>
 
           <!-- 2. Mian Altaf Hussain Zia - Director of Administration -->
@@ -265,9 +263,7 @@
             </div>
             <h4 class="staff-name">Mian Altaf Hussain Zia</h4>
             <span class="staff-designation">Director of Administration</span>
-            <a href="mailto:admin@bhss.ac.pk" class="staff-email-btn" title="Email Director of Administration">
-              <i class="fas fa-envelope"></i> admin@bhss.ac.pk
-            </a>
+            <a href="mailto:admin@bhss.ac.pk" class="staff-email-btn" title="Email Director of Administration" title="Email admin@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">admin@bhss.ac.pk</span></a>
           </div>
 
           <!-- 3. Asma Mazhar - Vice Principal -->
@@ -280,9 +276,7 @@
             </div>
             <h4 class="staff-name">Asma Mazhar</h4>
             <span class="staff-designation">Vice Principal</span>
-            <a href="mailto:asma.mazhar@bhss.ac.pk" class="staff-email-btn" title="Email Asma Mazhar">
-              <i class="fas fa-envelope"></i> asma.mazhar@bhss.ac.pk
-            </a>
+            <a href="mailto:asma.mazhar@bhss.ac.pk" class="staff-email-btn" title="Email Asma Mazhar" title="Email asma.mazhar@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">asma.mazhar@bhss.ac.pk</span></a>
           </div>
 
           <!-- 4. Zafar Iqbal - Head of Academic Affairs -->
@@ -295,9 +289,7 @@
             </div>
             <h4 class="staff-name">Zafar Iqbal</h4>
             <span class="staff-designation">Head of Academic Affairs</span>
-            <a href="mailto:zafar.iqbal@bhss.ac.pk" class="staff-email-btn" title="Email Zafar Iqbal">
-              <i class="fas fa-envelope"></i> zafar.iqbal@bhss.ac.pk
-            </a>
+            <a href="mailto:zafar.iqbal@bhss.ac.pk" class="staff-email-btn" title="Email Zafar Iqbal" title="Email zafar.iqbal@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">zafar.iqbal@bhss.ac.pk</span></a>
           </div>
 
           <!-- 5. Syed Raza - Controller of Examinations -->
@@ -310,9 +302,7 @@
             </div>
             <h4 class="staff-name">Syed Raza</h4>
             <span class="staff-designation">Controller of Examinations</span>
-            <a href="mailto:syed.raza@bhss.ac.pk" class="staff-email-btn" title="Email Syed Raza">
-              <i class="fas fa-envelope"></i> syed.raza@bhss.ac.pk
-            </a>
+            <a href="mailto:syed.raza@bhss.ac.pk" class="staff-email-btn" title="Email Syed Raza" title="Email syed.raza@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">syed.raza@bhss.ac.pk</span></a>
           </div>
 
           <!-- 6. Nadia Kazmi - Student Affairs Coordinator -->
@@ -325,9 +315,7 @@
             </div>
             <h4 class="staff-name">Nadia Kazmi</h4>
             <span class="staff-designation">Student Affairs Coordinator</span>
-            <a href="mailto:Nadia.kazmi@bhss.ac.pk" class="staff-email-btn" title="Email Nadia Kazmi">
-              <i class="fas fa-envelope"></i> Nadia.kazmi@bhss.ac.pk
-            </a>
+            <a href="mailto:Nadia.kazmi@bhss.ac.pk" class="staff-email-btn" title="Email Nadia Kazmi" title="Email Nadia.kazmi@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">Nadia.kazmi@bhss.ac.pk</span></a>
           </div>
         </div>
       </div>
@@ -350,7 +338,7 @@
             </div>
             <h4 class="staff-name">Aqeel Qasim</h4>
             <span class="staff-designation">Mathematics Teacher</span>
-            <a href="mailto:aqeel.qasim@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> aqeel.qasim@bhss.ac.pk</a>
+            <a href="mailto:aqeel.qasim@bhss.ac.pk" class="staff-email-btn" title="Email aqeel.qasim@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">aqeel.qasim@bhss.ac.pk</span></a>
           </div>
 
           <!-- 2. Amina Zafar -->
@@ -362,7 +350,7 @@
             </div>
             <h4 class="staff-name">Amina Zafar</h4>
             <span class="staff-designation">English Language Teacher</span>
-            <a href="mailto:amina.zafar@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> amina.zafar@bhss.ac.pk</a>
+            <a href="mailto:amina.zafar@bhss.ac.pk" class="staff-email-btn" title="Email amina.zafar@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">amina.zafar@bhss.ac.pk</span></a>
           </div>
 
           <!-- 3. Imtiaz Hussain -->
@@ -374,7 +362,7 @@
             </div>
             <h4 class="staff-name">Imtiaz Hussain</h4>
             <span class="staff-designation">Senior Physics Teacher</span>
-            <a href="mailto:imtiaz.hussain@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> imtiaz.hussain@bhss.ac.pk</a>
+            <a href="mailto:imtiaz.hussain@bhss.ac.pk" class="staff-email-btn" title="Email imtiaz.hussain@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">imtiaz.hussain@bhss.ac.pk</span></a>
           </div>
 
           <!-- 4. Mahjabeen Zafar -->
@@ -386,7 +374,7 @@
             </div>
             <h4 class="staff-name">Mahjabeen Zafar</h4>
             <span class="staff-designation">Chemistry Teacher</span>
-            <a href="mailto:mahajabeen.zafar@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> mahajabeen.zafar@bhss.ac.pk</a>
+            <a href="mailto:mahajabeen.zafar@bhss.ac.pk" class="staff-email-btn" title="Email mahajabeen.zafar@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">mahajabeen.zafar@bhss.ac.pk</span></a>
           </div>
 
           <!-- 5. Laiba Tehreem -->
@@ -398,7 +386,7 @@
             </div>
             <h4 class="staff-name">Laiba Tehreem</h4>
             <span class="staff-designation">Biology Teacher</span>
-            <a href="mailto:laiba.tehreem@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> laiba.tehreem@bhss.ac.pk</a>
+            <a href="mailto:laiba.tehreem@bhss.ac.pk" class="staff-email-btn" title="Email laiba.tehreem@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">laiba.tehreem@bhss.ac.pk</span></a>
           </div>
 
           <!-- 6. Ayesha Lateef -->
@@ -410,7 +398,7 @@
             </div>
             <h4 class="staff-name">Ayesha Lateef</h4>
             <span class="staff-designation">Urdu Language Teacher</span>
-            <a href="mailto:ayesha.lateef@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> ayesha.lateef@bhss.ac.pk</a>
+            <a href="mailto:ayesha.lateef@bhss.ac.pk" class="staff-email-btn" title="Email ayesha.lateef@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">ayesha.lateef@bhss.ac.pk</span></a>
           </div>
 
           <!-- 7. Midra Tahir -->
@@ -422,7 +410,7 @@
             </div>
             <h4 class="staff-name">Midra Tahir</h4>
             <span class="staff-designation">Computer Science Teacher</span>
-            <a href="mailto:midra.tahir@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> midra.tahir@bhss.ac.pk</a>
+            <a href="mailto:midra.tahir@bhss.ac.pk" class="staff-email-btn" title="Email midra.tahir@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">midra.tahir@bhss.ac.pk</span></a>
           </div>
 
           <!-- 8. Umme Saliha -->
@@ -434,7 +422,7 @@
             </div>
             <h4 class="staff-name">Umme Saliha</h4>
             <span class="staff-designation">Islamic Studies Teacher</span>
-            <a href="mailto:umme.saliha@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> umme.saliha@bhss.ac.pk</a>
+            <a href="mailto:umme.saliha@bhss.ac.pk" class="staff-email-btn" title="Email umme.saliha@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">umme.saliha@bhss.ac.pk</span></a>
           </div>
 
           <!-- 9. Naseer Ullah -->
@@ -446,7 +434,7 @@
             </div>
             <h4 class="staff-name">Naseer Ullah</h4>
             <span class="staff-designation">Pakistan Studies Teacher</span>
-            <a href="mailto:naseer.ullah@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> naseer.ullah@bhss.ac.pk</a>
+            <a href="mailto:naseer.ullah@bhss.ac.pk" class="staff-email-btn" title="Email naseer.ullah@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">naseer.ullah@bhss.ac.pk</span></a>
           </div>
 
           <!-- 10. Tahira Erum (Senior English Teacher) -->
@@ -458,7 +446,7 @@
             </div>
             <h4 class="staff-name">Tahira Erum</h4>
             <span class="staff-designation">Senior English Teacher</span>
-            <a href="mailto:tahira.erum@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> tahira.erum@bhss.ac.pk</a>
+            <a href="mailto:tahira.erum@bhss.ac.pk" class="staff-email-btn" title="Email tahira.erum@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">tahira.erum@bhss.ac.pk</span></a>
           </div>
 
           <!-- 11. Tanveer Hussain -->
@@ -470,7 +458,7 @@
             </div>
             <h4 class="staff-name">Tanveer Hussain</h4>
             <span class="staff-designation">Physical Education Teacher</span>
-            <a href="mailto:tanveer.hussain@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> tanveer.hussain@bhss.ac.pk</a>
+            <a href="mailto:tanveer.hussain@bhss.ac.pk" class="staff-email-btn" title="Email tanveer.hussain@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">tanveer.hussain@bhss.ac.pk</span></a>
           </div>
 
           <!-- 12. Hassan Raza -->
@@ -482,7 +470,7 @@
             </div>
             <h4 class="staff-name">Hassan Raza</h4>
             <span class="staff-designation">Senior Mathematics Teacher</span>
-            <a href="mailto:hassan.raza@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> hassan.raza@bhss.ac.pk</a>
+            <a href="mailto:hassan.raza@bhss.ac.pk" class="staff-email-btn" title="Email hassan.raza@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">hassan.raza@bhss.ac.pk</span></a>
           </div>
 
           <!-- 13. Sana Malik -->
@@ -494,7 +482,7 @@
             </div>
             <h4 class="staff-name">Sana Malik</h4>
             <span class="staff-designation">English Literature Teacher</span>
-            <a href="mailto:sana.malik@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> sana.malik@bhss.ac.pk</a>
+            <a href="mailto:sana.malik@bhss.ac.pk" class="staff-email-btn" title="Email sana.malik@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">sana.malik@bhss.ac.pk</span></a>
           </div>
 
           <!-- 14. Bilal Ahmed -->
@@ -506,7 +494,7 @@
             </div>
             <h4 class="staff-name">Bilal Ahmed</h4>
             <span class="staff-designation">Physics Teacher</span>
-            <a href="mailto:bilal.ahmed@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> bilal.ahmed@bhss.ac.pk</a>
+            <a href="mailto:bilal.ahmed@bhss.ac.pk" class="staff-email-btn" title="Email bilal.ahmed@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">bilal.ahmed@bhss.ac.pk</span></a>
           </div>
 
           <!-- 15. Maryam Fatima -->
@@ -518,7 +506,7 @@
             </div>
             <h4 class="staff-name">Maryam Fatima</h4>
             <span class="staff-designation">Chemistry Teacher</span>
-            <a href="mailto:maryam.fatima@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> maryam.fatima@bhss.ac.pk</a>
+            <a href="mailto:maryam.fatima@bhss.ac.pk" class="staff-email-btn" title="Email maryam.fatima@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">maryam.fatima@bhss.ac.pk</span></a>
           </div>
 
           <!-- 16. Farhan Ali -->
@@ -530,7 +518,7 @@
             </div>
             <h4 class="staff-name">Farhan Ali</h4>
             <span class="staff-designation">Information Technology Teacher</span>
-            <a href="mailto:farhan.ali@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> farhan.ali@bhss.ac.pk</a>
+            <a href="mailto:farhan.ali@bhss.ac.pk" class="staff-email-btn" title="Email farhan.ali@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">farhan.ali@bhss.ac.pk</span></a>
           </div>
 
           <!-- 17. Usman Tariq -->
@@ -542,7 +530,7 @@
             </div>
             <h4 class="staff-name">Usman Tariq</h4>
             <span class="staff-designation">Economics Teacher</span>
-            <a href="mailto:usman.tariq@bhss.ac.pk" class="staff-email-btn"><i class="fas fa-envelope"></i> usman.tariq@bhss.ac.pk</a>
+            <a href="mailto:usman.tariq@bhss.ac.pk" class="staff-email-btn" title="Email usman.tariq@bhss.ac.pk"><i class="fas fa-envelope"></i> <span class="email-text">usman.tariq@bhss.ac.pk</span></a>
           </div>
         </div>
       </div>

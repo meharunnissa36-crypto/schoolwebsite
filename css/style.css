@@ -4329,31 +4329,136 @@ ul, ol {
 }
 
 
-/* ==========================================
-   FACULTY & STAFF DIRECTORY STYLING
-   ========================================== */
-.staff-section {
-  padding: 70px 0;
-  background: var(--color-bg-light);
+/* ==========================================================================
+   FACULTY & STAFF DIRECTORY & ABOUT US FULL RESPONSIVE STYLING
+   ========================================================================== */
+
+/* 1. About Overview Highlights Grid */
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 25px;
 }
 
+.about-highlight-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-top: 3.5px solid var(--color-gold);
+  border-radius: 12px;
+  padding: 24px 18px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(4, 13, 29, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-highlight-card.navy-accent {
+  border-top-color: var(--color-navy);
+}
+
+.about-highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(4, 13, 29, 0.08);
+}
+
+.about-highlight-icon {
+  font-size: 2.2rem;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.about-highlight-card.navy-accent .about-highlight-icon {
+  color: var(--color-navy);
+}
+
+.about-highlight-title {
+  font-family: var(--font-heading);
+  color: var(--color-navy-dark);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.about-highlight-desc {
+  font-size: 0.88rem;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* 2. Staff Section Container */
+.staff-section {
+  padding: 70px 0 90px;
+  background: #F8FAFC;
+}
+
+/* 3. Category Filter Bar (Pills) */
 .staff-filter-bar {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 45px;
   flex-wrap: wrap;
+}
+
+.staff-filter-bar .filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: var(--color-white);
+  border: 1.5px solid #CBD5E1;
+  font-family: var(--font-body, inherit);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--color-navy-dark);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.staff-filter-bar .filter-btn i {
+  color: var(--color-gold);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.staff-filter-bar .filter-btn:hover {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(8, 27, 58, 0.1);
+}
+
+.staff-filter-bar .filter-btn.active {
+  background: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+  box-shadow: 0 6px 18px rgba(8, 27, 58, 0.2);
+}
+
+.staff-filter-bar .filter-btn.active i {
+  color: #FDE68A;
+}
+
+/* 4. Category Group Section */
+.staff-group-section {
+  margin-bottom: 50px;
 }
 
 .staff-category-heading {
   font-family: var(--font-heading);
   color: var(--color-navy-dark);
   font-size: 1.6rem;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   display: flex;
   align-items: center;
   gap: 12px;
-  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.35);
   padding-bottom: 12px;
 }
 
@@ -4361,53 +4466,57 @@ ul, ol {
   color: var(--color-gold);
 }
 
+/* 5. Staff Cards Grid */
 .staff-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 26px;
-  margin-bottom: 55px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
+/* 6. Individual Staff Card */
 .staff-card {
   background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: 30px 22px 24px;
+  border-radius: 14px;
+  padding: 28px 18px 22px;
   text-align: center;
-  box-shadow: 0 4px 18px rgba(4, 13, 29, 0.06);
+  box-shadow: 0 4px 18px rgba(4, 13, 29, 0.05);
   border: 1.5px solid #E2E8F0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .staff-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 32px rgba(4, 13, 29, 0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(4, 13, 29, 0.12);
   border-color: var(--color-gold);
 }
 
 .staff-avatar-wrap {
   position: relative;
-  width: 130px;
-  height: 130px;
-  margin: 0 auto 18px;
+  width: 124px;
+  height: 124px;
+  margin: 0 auto 16px;
+  flex-shrink: 0;
 }
 
 .staff-avatar-circle {
-  width: 130px;
-  height: 130px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--color-white);
-  box-shadow: 0 0 0 3px var(--color-gold), 0 8px 24px rgba(8, 27, 58, 0.16);
+  border: 3.5px solid #FFFFFF;
+  box-shadow: 0 0 0 2.5px var(--color-gold), 0 8px 22px rgba(8, 27, 58, 0.16);
   transition: transform 0.3s ease;
   display: block;
 }
 
 .staff-card:hover .staff-avatar-circle {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .staff-badge-icon {
@@ -4423,48 +4532,62 @@ ul, ol {
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  border: 2.5px solid var(--color-white);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
 
 .staff-name {
   font-family: var(--font-heading);
-  font-size: 1.18rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-navy-dark);
   margin-bottom: 6px;
+  line-height: 1.25;
 }
 
 .staff-designation {
   display: inline-block;
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--color-navy);
   background: rgba(8, 27, 58, 0.07);
-  padding: 5px 14px;
+  padding: 4px 12px;
   border-radius: 20px;
   margin-bottom: 14px;
-  line-height: 1.3;
+  line-height: 1.35;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .staff-email-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--color-navy-dark);
   background: #F1F5F9;
-  padding: 7px 14px;
+  padding: 8px 12px;
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.25s ease;
-  word-break: break-all;
-  max-width: 100%;
+  margin-top: auto;
 }
 
 .staff-email-btn i {
   color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.staff-email-btn .email-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .staff-email-btn:hover {
@@ -4474,25 +4597,27 @@ ul, ol {
 }
 
 .staff-email-btn:hover i {
-  color: var(--color-white);
+  color: #FDE68A;
 }
 
-/* General School Email Accounts Grid */
+/* 7. Official Departmental Accounts Grid */
 .dept-emails-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin-top: 15px;
 }
 
 .dept-email-card {
   background: var(--color-white);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   padding: 24px 20px;
   border: 1px solid #E2E8F0;
   border-left: 4px solid var(--color-gold);
   box-shadow: 0 4px 14px rgba(0,0,0,0.04);
   transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .dept-email-card:hover {
@@ -4506,7 +4631,7 @@ ul, ol {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-navy-dark);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -4518,20 +4643,23 @@ ul, ol {
 }
 
 .dept-purpose {
-  font-size: 0.86rem;
-  color: var(--color-slate);
-  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-bottom: 14px;
   line-height: 1.5;
+  flex-grow: 1;
 }
 
 .dept-link {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--color-navy);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  word-break: break-all;
+  margin-top: auto;
 }
 
 .dept-link:hover {
@@ -4539,31 +4667,149 @@ ul, ol {
   text-decoration: underline;
 }
 
-/* Staff Section Responsive */
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS: DESKTOP -> TABLET -> MOBILE
+   ========================================================================== */
+
+/* Laptop / Small Desktop (992px to 1199px) */
+@media (max-width: 1199px) {
+  .staff-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .dept-emails-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Tablet (769px to 991px) */
+@media (max-width: 991px) {
+  .about-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .staff-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Mobile & Small Tablets (<= 768px) */
 @media (max-width: 768px) {
-  .staff-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
-    gap: 18px !important;
+  .staff-section {
+    padding: 45px 0 60px;
   }
-  .staff-card {
-    padding: 22px 16px 20px !important;
+
+  /* Horizontal swipeable chip bar on mobile */
+  .staff-filter-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px 16px 14px;
+    margin: 0 -16px 25px -16px;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-  .staff-avatar-wrap,
-  .staff-avatar-circle {
-    width: 115px !important;
-    height: 115px !important;
+  .staff-filter-bar::-webkit-scrollbar {
+    display: none;
   }
+  .staff-filter-bar .filter-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 0.82rem;
+    min-height: 38px;
+  }
+
   .staff-category-heading {
-    font-size: 1.35rem !important;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    gap: 8px;
   }
-}
 
-@media (max-width: 480px) {
   .staff-grid {
-    grid-template-columns: 1fr !important;
-    max-width: 330px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .staff-card {
+    padding: 20px 12px 16px;
+    border-radius: 12px;
+  }
+
+  .staff-avatar-wrap {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 12px;
+  }
+
+  .staff-badge-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.72rem;
+  }
+
+  .staff-name {
+    font-size: 1.02rem;
+    margin-bottom: 4px;
+  }
+
+  .staff-designation {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    margin-bottom: 10px;
+  }
+
+  .staff-email-btn {
+    font-size: 0.74rem;
+    padding: 7px 8px;
+  }
+
+  .dept-emails-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 }
 
+/* Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 16px;
+  }
+
+  .staff-card {
+    padding: 24px 18px 20px;
+  }
+
+  .staff-avatar-wrap {
+    width: 115px;
+    height: 115px;
+    margin: 0 auto 14px;
+  }
+
+  .staff-name {
+    font-size: 1.15rem;
+  }
+
+  .staff-designation {
+    font-size: 0.82rem;
+    padding: 4px 12px;
+  }
+
+  .staff-email-btn {
+    font-size: 0.78rem;
+    padding: 8px 12px;
+  }
+}
