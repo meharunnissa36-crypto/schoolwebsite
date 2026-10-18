@@ -19,9 +19,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=5.2">
-  <link rel="stylesheet" href="css/our-schools.css">
-  <link rel="stylesheet" href="css/careers.css">
+  <link rel="stylesheet" href="css/style.css?v=6.0">
+  <link rel="stylesheet" href="css/our-schools.css?v=6.0">
+  <link rel="stylesheet" href="css/about.css?v=6.0">
 </head>
 <body class="inner-page about-page">
 
@@ -163,9 +163,9 @@
   </nav>
 
   <!-- 5. ABOUT SCHOOL OVERVIEW & HERITAGE -->
-  <section class="page-content" id="welcome" style="padding: 60px 0 35px; background: #FFFFFF;">
+  <section class="page-content about-welcome-section" id="welcome">
     <div class="container">
-      <div class="section-header anim-reveal" style="text-align: center; max-width: 900px; margin: 0 auto 40px;">
+      <div class="section-header anim-reveal">
         <div class="section-tag">
           <i class="fas fa-landmark"></i> Est. 1988 &bull; Khewa, Mandi Bahauddin
         </div>
@@ -173,7 +173,7 @@
         <div class="title-ornament">
           <span></span><i class="fas fa-school"></i><span></span>
         </div>
-        <p class="section-subtitle" style="font-size: 1.05rem; line-height: 1.8; color: #475569; margin-top: 15px;">
+        <p class="section-subtitle">
           For nearly four decades, <strong>Basharat Higher Secondary School</strong> has stood as a beacon of scholarly achievement and character formation in District Mandi Bahauddin. Affiliated with the <strong>Board of Intermediate &amp; Secondary Education (BISE) Gujranwala (BISE GRW)</strong>, our institution provides a seamless educational pathway across four dedicated wings: <strong>Primary School</strong> (Playgroup–5), <strong>Middle School</strong> (Grades 6–8), <strong>High School</strong> (Grades 9–10 Matric Science &amp; CS), and <strong>Higher Secondary School for Girls</strong> (FSc Pre-Medical, Pre-Engineering &amp; ICS).
         </p>
       </div>
@@ -200,30 +200,31 @@
           <h3 class="about-highlight-title">Moral Tarbiyah</h3>
           <p class="about-highlight-desc">Islamic character building, discipline, civic manners, and lifelong values.</p>
         </div>
-      
+      </div>
+
       <!-- Featured Collegiate Showcase: Higher Secondary School for Girls -->
-      <div style="margin-top: 45px; background: #FFFFFF; border-radius: 14px; border: 1.5px solid #E2E8F0; overflow: hidden; box-shadow: 0 8px 24px rgba(8, 27, 58, 0.08);">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: center;">
-          <div style="position: relative; overflow: hidden; max-height: 400px;">
+      <div class="collegiate-showcase anim-reveal">
+        <div class="collegiate-grid">
+          <div class="collegiate-img-wrap">
             <img src="images/pakistani-college-girls.jpg" 
                  alt="Higher Secondary School for Girls Scholars at Basharat Higher Secondary School" 
-                 style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+                 class="collegiate-img" loading="lazy">
           </div>
-          <div style="padding: 35px 30px;">
-            <span style="display: inline-block; background: rgba(212, 175, 55, 0.15); color: #B45309; font-weight: 700; font-size: 0.82rem; padding: 5px 14px; border-radius: 20px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">
+          <div class="collegiate-content">
+            <span class="collegiate-badge">
               <i class="fas fa-female"></i> Collegiate Wing Distinction
             </span>
-            <h3 style="font-family: var(--font-heading); color: #081B3A; font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">
+            <h3 class="collegiate-title">
               Empowering Female Scholars in FSc &amp; ICS
             </h3>
-            <p style="color: #64748B; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+            <p class="collegiate-p">
               Basharat Higher Secondary School for Girls provides a dedicated, culturally dignified, and academically rigorous environment in Khewa, Mandi Bahauddin. Led by experienced board faculty, our scholars excel in FSc Pre-Medical, Pre-Engineering, and ICS with 100% board pass rates and university admissions.
             </p>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-              <a href="our-schools.html#higher-secondary" class="filter-btn active" style="text-decoration: none; padding: 10px 22px;">
+            <div class="collegiate-actions">
+              <a href="our-schools.html#higher-secondary" class="collegiate-btn collegiate-btn-primary">
                 <i class="fas fa-graduation-cap"></i> Explore Girls Wing &rarr;
               </a>
-              <a href="https://wa.me/923338011180?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20inquire%20about%20Girls%20Higher%20Secondary%20Admissions" target="_blank" class="filter-btn" style="text-decoration: none; padding: 10px 22px;">
+              <a href="https://wa.me/923338011180?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20inquire%20about%20Girls%20Higher%20Secondary%20Admissions" target="_blank" class="collegiate-btn collegiate-btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> Admissions WhatsApp
               </a>
             </div>
@@ -235,11 +236,11 @@
   </section>
 
   <!-- 6. MAIN STAFF & FACULTY DIRECTORY SECTION -->
-  <main class="staff-section" id="staff" style="padding: 60px 0 80px; background: #F8FAFC;">
+  <main class="staff-section" id="staff">
     <div class="container">
       
       <!-- Section Header -->
-      <div class="section-header anim-reveal" style="text-align: center; margin-bottom: 35px;">
+      <div class="section-header anim-reveal">
         <div class="section-tag">
           <i class="fas fa-users"></i> Dedicated Mentors &amp; Administration
         </div>
@@ -247,13 +248,13 @@
         <div class="title-ornament">
           <span></span><i class="fas fa-user-graduate"></i><span></span>
         </div>
-        <p class="section-subtitle" style="max-width: 760px; margin: 12px auto 0; color: #64748B;">
+        <p class="section-subtitle">
           Our distinguished faculty members and administrative team are dedicated to mentoring students towards academic excellence, scientific competence, and exemplary character.
         </p>
       </div>
 
       <!-- Quick Filter Navigation Bar -->
-      <div class="staff-filter-bar anim-reveal" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; flex-wrap: wrap;">
+      <div class="staff-filter-bar anim-reveal">
         <button type="button" class="filter-btn active" data-filter="all"><i class="fas fa-th-large"></i> All Members (23)</button>
         <button type="button" class="filter-btn" data-filter="leadership"><i class="fas fa-user-shield"></i> Leadership &amp; Admin (6)</button>
         <button type="button" class="filter-btn" data-filter="science"><i class="fas fa-atom"></i> STEM &amp; Sciences (8)</button>
@@ -353,7 +354,7 @@
       <!-- ==========================================
            2. TEACHING FACULTY (17 MEMBERS)
            ========================================== -->
-      <div id="teaching" class="staff-group-section" style="margin-top: 25px;">
+      <div id="teaching" class="staff-group-section">
         <h3 class="staff-category-heading anim-reveal">
           <i class="fas fa-chalkboard-teacher"></i> 2. Teaching Faculty
         </h3>
@@ -568,7 +569,7 @@
       <!-- ==========================================
            3. GENERAL SCHOOL EMAIL ACCOUNTS (4 DEPARTMENTS)
            ========================================== -->
-      <div id="accounts" class="staff-group-section" style="margin-top: 35px;">
+      <div id="accounts" class="staff-group-section">
         <h3 class="staff-category-heading anim-reveal">
           <i class="fas fa-mail-bulk"></i> 3. Official Departmental Accounts
         </h3>
