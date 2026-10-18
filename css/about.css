@@ -423,19 +423,31 @@
   position: relative;
   width: 120px;
   height: 120px;
-  margin: 0 auto 15px;
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 16px;
   flex-shrink: 0;
 }
 
 .staff-avatar-circle {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3.5px solid #FFFFFF;
-  box-shadow: 0 0 0 2.5px var(--color-gold, #D4AF37), 0 8px 22px rgba(8, 27, 58, 0.16);
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  border: 3.5px solid #FFFFFF !important;
+  box-shadow: 0 0 0 2.5px var(--color-gold, #D4AF37), 0 8px 22px rgba(8, 27, 58, 0.16) !important;
   transition: transform 0.3s ease;
-  display: block;
+  display: block !important;
+  flex-shrink: 0 !important;
 }
 
 .staff-card:hover .staff-avatar-circle {
@@ -786,9 +798,20 @@
     border-radius: 12px;
   }
   .staff-avatar-wrap {
-    width: 95px;
-    height: 95px;
-    margin: 0 auto 12px;
+    width: 95px !important;
+    height: 95px !important;
+    min-width: 95px !important;
+    min-height: 95px !important;
+    max-width: 95px !important;
+    max-height: 95px !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 auto 12px !important;
+  }
+  .staff-avatar-circle {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
   }
   .staff-badge-icon {
     width: 24px;
@@ -851,7 +874,18 @@
   .staff-avatar-wrap {
     width: 105px !important;
     height: 105px !important;
-    margin: 0 auto 12px !important;
+    min-width: 105px !important;
+    min-height: 105px !important;
+    max-width: 105px !important;
+    max-height: 105px !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 auto 14px !important;
+  }
+  .staff-avatar-circle {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
   }
 
   .staff-name {
