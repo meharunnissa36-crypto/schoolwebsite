@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCounterAnimations();
   initWingFilters();
+  initStaffFilters();
   initBackToTop();
   initModals();
   initMobileNav();
@@ -243,6 +244,53 @@ function initWingFilters() {
           }, 300);
         }
       });
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   6.5. STAFF & FACULTY CATEGORY FILTERS
+   -------------------------------------------------------------------------- */
+function initStaffFilters() {
+  const filterBtns = document.querySelectorAll('.staff-filter-bar .filter-btn');
+  const cards = document.querySelectorAll('.staff-card');
+  const groupHeadings = document.querySelectorAll('.staff-group-section');
+  const accountsSection = document.getElementById('accounts');
+
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      if (filter === 'all') {
+        cards.forEach(card => card.style.display = 'flex');
+        groupHeadings.forEach(g => g.style.display = 'block');
+        if (accountsSection) accountsSection.style.display = 'block';
+      } else if (filter === 'leadership') {
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-category') || '';
+          card.style.display = cat.includes('leadership') ? 'flex' : 'none';
+        });
+        const leadSec = document.getElementById('leadership');
+        const teachSec = document.getElementById('teaching');
+        if (leadSec) leadSec.style.display = 'block';
+        if (teachSec) teachSec.style.display = 'none';
+        if (accountsSection) accountsSection.style.display = 'none';
+      } else {
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-category') || '';
+          card.style.display = cat.includes(filter) ? 'flex' : 'none';
+        });
+        const leadSec = document.getElementById('leadership');
+        const teachSec = document.getElementById('teaching');
+        if (leadSec) leadSec.style.display = 'none';
+        if (teachSec) teachSec.style.display = 'block';
+        if (accountsSection) accountsSection.style.display = 'none';
+      }
     });
   });
 }
